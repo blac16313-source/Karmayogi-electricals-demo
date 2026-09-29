@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Karmayogi Electricals — Electricals Under One Roof</title>
+
+<meta name="description"
+content="Karmayogi Electricals — electrical goods wholesale and retail supplier at Ghora Nakkas, Bhopal.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --bg:#090a0b;
+  --surface:#111315;
+  --surface2:#17191b;
+  --line:rgba(255,255,255,.09);
+  --text:#f5f5f2;
+  --muted:#92979a;
+  --accent:#d9ff55;
+  --accent2:#b8e933;
+  --white:#fff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:"DM Sans",sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input,
+textarea{
+  font:inherit;
+}
+
+.container{
+  width:min(1180px,calc(100% - 40px));
+  margin:auto;
+}
+
+/* NAV */
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  height:78px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  background:rgba(9,10,11,.78);
+  backdrop-filter:blur(18px);
+}
+
+.nav-inner{
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-family:Manrope,sans-serif;
+  font-weight:800;
+  letter-spacing:-.7px;
+  font-size:19px;
+}
+
+.logo-mark{
+  width:36px;
+  height:36px;
+  border-radius:10px;
+  background:var(--accent);
+  color:#10120d;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  font-size:17px;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+
+.nav-links a{
+  color:#a9adaf;
+  font-size:14px;
+  transition:.25s;
+}
+
+.nav-links a:hover{
+  color:white;
+}
+
+.nav-btn{
+  background:var(--accent);
+  color:#10120d!important;
+  padding:11px 18px;
+  border-radius:8px;
+  font-weight:700;
+}
+
+.menu{
+  display:none;
+  font-size:25px;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  min-height:850px;
+  padding-top:78px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:650px;
+  height:650px;
+  border-radius:50%;
+  background:rgba(217,255,85,.07);
+  filter:blur(100px);
+  right:-180px;
+  top:120px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.12fr .88fr;
+  gap:70px;
+  align-items:center;
+  position:relative;
+  z-index:2;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--accent);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  margin-bottom:25px;
+}
+
+.dot{
+  width:7px;
+  height:7px;
+  background:var(--accent);
+  border-radius:50%;
+  box-shadow:0 0 15px var(--accent);
+}
+
+.hero h1{
+  font-family:Manrope,sans-serif;
+  font-size:clamp(52px,7vw,91px);
+  line-height:.96;
+  letter-spacing:-5px;
+  max-width:800px;
+}
+
+.hero h1 span{
+  color:var(--accent);
+}
+
+.hero-text{
+  margin-top:28px;
+  color:#a4a8aa;
+  font-size:17px;
+  line-height:1.75;
+  max-width:610px;
+}
+
+.hero-actions{
+  margin-top:36px;
+  display:flex;
+  gap:13px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  min-height:49px;
+  padding:0 20px;
+  border-radius:9px;
+  border:1px solid var(--line);
+  font-weight:700;
+  font-size:14px;
+  transition:.25s;
+}
+
+.btn-primary{
+  background:var(--accent);
+  color:#10120d;
+  border-color:var(--accent);
+}
+
+.btn-primary:hover{
+  transform:translateY(-2px);
+  background:#e5ff83;
+}
+
+.btn-dark:hover{
+  border-color:#555;
+  transform:translateY(-2px);
+}
+
+/* HERO VISUAL */
+
+.hero-card{
+  position:relative;
+  min-height:500px;
+  border:1px solid var(--line);
+  border-radius:26px;
+  background:
+    radial-gradient(circle at 70% 25%,rgba(217,255,85,.13),transparent 25%),
+    linear-gradient(145deg,#181b1d,#0d0f10);
+  overflow:hidden;
+  box-shadow:0 30px 100px rgba(0,0,0,.35);
+}
+
+.hero-card::after{
+  content:"";
+  position:absolute;
+  inset:20px;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:20px;
+  pointer-events:none;
+}
+
+.electric-art{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+}
+
+.big-bulb{
+  width:210px;
+  height:290px;
+  border-radius:50% 50% 44% 44%;
+  border:2px solid rgba(217,255,85,.65);
+  box-shadow:
+    0 0 40px rgba(217,255,85,.2),
+    inset 0 0 35px rgba(217,255,85,.07);
+  position:relative;
+  transform:rotate(-8deg);
+}
+
+.big-bulb::before{
+  content:"";
+  position:absolute;
+  width:90px;
+  height:70px;
+  left:58px;
+  bottom:-57px;
+  border:2px solid #8d9497;
+  border-top:0;
+  border-radius:0 0 12px 12px;
+}
+
+.big-bulb::after{
+  content:"";
+  position:absolute;
+  width:50px;
+  height:30px;
+  left:78px;
+  bottom:-87px;
+  background:#858b8e;
+  border-radius:4px;
+}
+
+.ray{
+  position:absolute;
+  height:1px;
+  width:100px;
+  background:var(--accent);
+  opacity:.55;
+}
+
+.r1{transform:rotate(25deg);top:30%;left:14%}
+.r2{transform:rotate(-22deg);top:38%;right:10%}
+.r3{transform:rotate(75deg);top:15%;left:42%}
+.r4{transform:rotate(-72deg);bottom:23%;left:25%}
+
+.hero-stat{
+  position:absolute;
+  bottom:32px;
+  left:32px;
+  right:32px;
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+}
+
+.hero-stat strong{
+  font-family:Manrope;
+  font-size:28px;
+}
+
+.hero-stat small{
+  color:#81878a;
+  display:block;
+  margin-top:5px;
+}
+
+/* TRUST */
+
+.trust{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:27px 0;
+}
+
+.trust-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.trust-label{
+  color:#777d80;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+
+.brands{
+  display:flex;
+  flex-wrap:wrap;
+  gap:32px;
+  color:#9b9fa1;
+  font-weight:700;
+  font-size:15px;
+}
+
+/* SECTIONS */
+
+section{
+  padding:110px 0;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:40px;
+  margin-bottom:48px;
+}
+
+.kicker{
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:13px;
+}
+
+.section-title{
+  font-family:Manrope;
+  font-size:clamp(34px,4.2vw,57px);
+  letter-spacing:-2.8px;
+  line-height:1.05;
+}
+
+.section-description{
+  color:#878d90;
+  max-width:420px;
+  line-height:1.7;
+}
+
+/* CATEGORIES */
+
+.categories{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.category{
+  min-height:260px;
+  padding:27px;
+  border:1px solid var(--line);
+  background:linear-gradient(145deg,#141719,#0e1011);
+  border-radius:17px;
+  position:relative;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.category:hover{
+  transform:translateY(-5px);
+  border-color:rgba(217,255,85,.3);
+}
+
+.category-number{
+  color:#555b5d;
+  font-size:12px;
+}
+
+.category-icon{
+  width:56px;
+  height:56px;
+  margin-top:42px;
+  border:1px solid rgba(217,255,85,.2);
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  font-size:26px;
+  background:rgba(217,255,85,.05);
+}
+
+.category h3{
+  font-family:Manrope;
+  margin-top:20px;
+  font-size:20px;
+}
+
+.category p{
+  margin-top:8px;
+  color:#777d80;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.arrow{
+  position:absolute;
+  right:25px;
+  bottom:25px;
+  color:var(--accent);
+  font-size:20px;
+}
+
+/* ABOUT */
+
+.about{
+  background:#0d0f10;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:90px;
+  align-items:center;
+}
+
+.about-number{
+  font-family:Manrope;
+  font-size:clamp(100px,15vw,190px);
+  letter-spacing:-12px;
+  line-height:.8;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(217,255,85,.28);
+}
+
+.about-copy h2{
+  font-family:Manrope;
+  font-size:clamp(36px,4vw,56px);
+  line-height:1.04;
+  letter-spacing:-3px;
+}
+
+.about-copy h2 span{
+  color:var(--accent);
+}
+
+.about-copy p{
+  color:#858b8e;
+  line-height:1.8;
+  margin-top:24px;
+  max-width:620px;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+  margin-top:38px;
+}
+
+.feature{
+  border-top:1px solid var(--line);
+  padding-top:17px;
+}
+
+.feature strong{
+  font-size:14px;
+}
+
+.feature p{
+  font-size:12px;
+  margin-top:5px;
+}
+
+/* PRODUCTS */
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.product{
+  border:1px solid var(--line);
+  border-radius:15px;
+  overflow:hidden;
+  background:#111315;
+  transition:.3s;
+}
+
+.product:hover{
+  transform:translateY(-4px);
+  border-color:#444;
+}
+
+.product-image{
+  height:200px;
+  position:relative;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(circle,rgba(217,255,85,.1),transparent 40%),
+    #181b1c;
+}
+
+.product-shape{
+  width:100px;
+  height:125px;
+  border:2px solid rgba(217,255,85,.55);
+  border-radius:12px;
+}
+
+.product-shape.wire{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+}
+
+.product-shape.switch{
+  width:85px;
+  height:120px;
+  border-radius:9px;
+}
+
+.product-shape.fan{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+}
+
+.product-info{
+  padding:19px;
+}
+
+.product-info small{
+  color:#686e71;
+  text-transform:uppercase;
+  font-size:9px;
+  letter-spacing:1.2px;
+}
+
+.product-info h3{
+  font-size:16px;
+  margin-top:7px;
+}
+
+.product-info p{
+  color:#777d80;
+  font-size:12px;
+  margin-top:7px;
+}
+
+/* WHOLESALE */
+
+.wholesale{
+  padding:0 0 110px;
+}
+
+.wholesale-box{
+  min-height:430px;
+  border-radius:25px;
+  overflow:hidden;
+  border:1px solid rgba(217,255,85,.2);
+  background:
+    radial-gradient(circle at 85% 25%,rgba(217,255,85,.12),transparent 30%),
+    linear-gradient(120deg,#151817,#0d0f0e);
+  padding:65px;
+  position:relative;
+}
+
+.wholesale-box::after{
+  content:"WHOLESALE";
+  position:absolute;
+  right:-30px;
+  bottom:-40px;
+  font-family:Manrope;
+  font-weight:800;
+  font-size:130px;
+  color:rgba(255,255,255,.025);
+}
+
+.wholesale h2{
+  font-family:Manrope;
+  font-size:clamp(40px,5vw,70px);
+  line-height:.98;
+  letter-spacing:-4px;
+  max-width:690px;
+}
+
+.wholesale h2 span{
+  color:var(--accent);
+}
+
+.wholesale p{
+  color:#878d8f;
+  line-height:1.7;
+  max-width:610px;
+  margin:25px 0 32px;
+}
+
+.wholesale-points{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:30px;
+}
+
+.point{
+  padding:9px 13px;
+  border:1px solid var(--line);
+  border-radius:7px;
+  color:#a5aaac;
+  font-size:12px;
+}
+
+/* REVIEWS */
+
+.reviews{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.review{
+  border:1px solid var(--line);
+  border-radius:17px;
+  padding:30px;
+  background:#111315;
+}
+
+.stars{
+  color:var(--accent);
+  letter-spacing:2px;
+}
+
+.review p{
+  margin-top:23px;
+  font-size:17px;
+  line-height:1.7;
+  color:#c5c8c8;
+}
+
+.reviewer{
+  margin-top:25px;
+  color:#777d80;
+  font-size:12px;
+}
+
+/* CONTACT */
+
+.contact{
+  background:#0d0f10;
+  border-top:1px solid var(--line);
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:70px;
+}
+
+.contact-info h2{
+  font-family:Manrope;
+  font-size:clamp(40px,5vw,65px);
+  letter-spacing:-3px;
+  line-height:1;
+}
+
+.contact-info h2 span{
+  color:var(--accent);
+}
+
+.contact-info > p{
+  color:#818789;
+  line-height:1.7;
+  margin:24px 0 35px;
+}
+
+.contact-item{
+  display:flex;
+  gap:15px;
+  margin-top:21px;
+  color:#a4a8aa;
+  font-size:14px;
+}
+
+.contact-item b{
+  display:block;
+  color:white;
+  margin-bottom:3px;
+}
+
+.contact-form{
+  background:#141617;
+  border:1px solid var(--line);
+  padding:32px;
+  border-radius:19px;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+
+.field{
+  margin-bottom:13px;
+}
+
+.field label{
+  display:block;
+  color:#777d80;
+  font-size:11px;
+  margin-bottom:7px;
+}
+
+.field input,
+.field textarea,
+.field select{
+  width:100%;
+  border:1px solid var(--line);
+  background:#0c0e0f;
+  color:white;
+  border-radius:8px;
+  padding:13px;
+  outline:none;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus{
+  border-color:rgba(217,255,85,.55);
+}
+
+.field textarea{
+  min-height:125px;
+  resize:vertical;
+}
+
+/* FOOTER */
+
+footer{
+  padding:35px 0;
+  border-top:1px solid var(--line);
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:#646a6c;
+  font-size:12px;
+}
+
+.footer-links{
+  display:flex;
+  gap:20px;
+}
+
+.footer-links a:hover{
+  color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .nav-links{
+    position:fixed;
+    top:78px;
+    left:20px;
+    right:20px;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    padding:20px;
+    background:#151719;
+    border:1px solid var(--line);
+    border-radius:14px;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .hero{
+    min-height:auto;
+    padding-top:145px;
+    padding-bottom:80px;
+  }
+
+  .hero-grid,
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    letter-spacing:-3px;
+  }
+
+  .hero-card{
+    min-height:430px;
+  }
+
+  .categories{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .about-grid{
+    gap:45px;
+  }
+
+  .about-number{
+    font-size:100px;
+  }
+
+  .wholesale-box{
+    padding:40px 28px;
+  }
+
+  .contact-grid{
+    gap:40px;
+  }
+}
+
+@media(max-width:600px){
+
+  .container{
+    width:min(100% - 28px,1180px);
+  }
+
+  nav{
+    height:70px;
+  }
+
+  .nav-links{
+    top:70px;
+  }
+
+  .hero{
+    padding-top:120px;
+  }
+
+  .hero h1{
+    font-size:52px;
+  }
+
+  .hero-text{
+    font-size:15px;
+  }
+
+  .hero-card{
+    min-height:370px;
+  }
+
+  .big-bulb{
+    width:145px;
+    height:205px;
+  }
+
+  .big-bulb::before{
+    left:40px;
+    width:65px;
+  }
+
+  .big-bulb::after{
+    left:53px;
+  }
+
+  .trust-inner{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .brands{
+    gap:18px;
+  }
+
+  section{
+    padding:80px 0;
+  }
+
+  .section-head{
+    display:block;
+  }
+
+  .section-description{
+    margin-top:18px;
+  }
+
+  .categories,
+  .products,
+  .reviews{
+    grid-template-columns:1fr;
+  }
+
+  .category{
+    min-height:230px;
+  }
+
+  .product-image{
+    height:220px;
+  }
+
+  .features,
+  .form-row{
+    grid-template-columns:1fr;
+  }
+
+  .wholesale{
+    padding-bottom:80px;
+  }
+
+  .wholesale h2{
+    letter-spacing:-2.5px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container nav-inner">
+
+    <a href="#" class="logo">
+      <div class="logo-mark">K</div>
+      KARMAYOGI ELECTRICALS
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#wholesale">Wholesale</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact" class="nav-btn">Get a Quote</a>
+    </div>
+
+    <div class="menu" onclick="toggleMenu()">☰</div>
+
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<header class="hero">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <div class="eyebrow">
+        <span class="dot"></span>
+        Bhopal's Electrical Supply Hub
+      </div>
+
+      <h1>
+        Everything<br>
+        <span>Electrical.</span><br>
+        One Roof.
+      </h1>
+
+      <p class="hero-text">
+        From household wiring to complete project requirements,
+        Karmayogi Electricals brings electrical essentials,
+        lighting and accessories together for retail and wholesale buyers.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary">
+          Explore Products →
+        </a>
+
+        <a href="#contact" class="btn btn-dark">
+          Request Wholesale Quote
+        </a>
+      </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+      <div class="electric-art">
+
+        <div class="ray r1"></div>
+        <div class="ray r2"></div>
+        <div class="ray r3"></div>
+        <div class="ray r4"></div>
+
+        <div class="big-bulb"></div>
+
+      </div>
+
+      <div class="hero-stat">
+        <div>
+          <strong>09—20</strong>
+          <small>Open Daily</small>
+        </div>
+
+        <div style="text-align:right">
+          <strong>BHOPAL</strong>
+          <small>Ghora Nakkas</small>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- BRANDS -->
+<div class="trust">
+
+  <div class="container trust-inner">
+
+    <div class="trust-label">
+      Brands available across categories
+    </div>
+
+    <div class="brands">
+      <span>HAVELLS</span>
+      <span>POLYCAB</span>
+      <span>FINOLEX</span>
+      <span>LEGRAND</span>
+      <span>ANCHOR</span>
+      <span>ORIENT</span>
+      <span>USHA</span>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- CATEGORIES -->
+<section id="products">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+        <div class="kicker">What we supply</div>
+        <h2 class="section-title">Built for every<br>electrical need.</h2>
+      </div>
+
+      <p class="section-description">
+        A practical range for homeowners, electricians,
+        contractors, builders and project procurement teams.
+      </p>
+
+    </div>
+
+
+    <div class="categories">
+
+      <a class="category" href="#catalog">
+        <span class="category-number">01 / 06</span>
+        <div class="category-icon">⌁</div>
+        <h3>Wires & Cables</h3>
+        <p>House wires, flexible cables and main supply solutions.</p>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="category" href="#catalog">
+        <span class="category-number">02 / 06</span>
+        <div class="category-icon">◈</div>
+        <h3>Modular Switches</h3>
+        <p>Switches, plates, sockets, regulators and accessories.</p>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="category" href="#catalog">
+        <span class="category-number">03 / 06</span>
+        <div class="category-icon">☼</div>
+        <h3>Lighting</h3>
+        <p>LED bulbs, tubelights, panels, battens and downlights.</p>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="category" href="#catalog">
+        <span class="category-number">04 / 06</span>
+        <div class="category-icon">✦</div>
+        <h3>Fans</h3>
+        <p>Ceiling, exhaust and high-speed air circulation products.</p>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="category" href="#catalog">
+        <span class="category-number">05 / 06</span>
+        <div class="category-icon">▣</div>
+        <h3>Switchgear</h3>
+        <p>MCBs, RCCBs, isolators and distribution boards.</p>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="category" href="#contact">
+        <span class="category-number">06 / 06</span>
+        <div class="category-icon">+</div>
+        <h3>Project Supply</h3>
+        <p>Bulk electrical procurement for construction projects.</p>
+        <span class="arrow">↗</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+  <div class="container about-grid">
+
+    <div class="about-number">
+      K
+    </div>
+
+    <div class="about-copy">
+
+      <div class="kicker">The Karmayogi edge</div>
+
+      <h2>
+        Electrical essentials,
+        <span>without the runaround.</span>
+      </h2>
+
+      <p>
+        Located at Ghora Nakkas in Bhopal, Karmayogi Electricals
+        serves customers looking for electrical goods for homes,
+        renovation work, electrical contracting and larger projects.
+        The store operates as a wholesale and retail destination.
+      </p>
+
+      <div class="features">
+
+        <div class="feature">
+          <strong>Wholesale + Retail</strong>
+          <p>Buy a single requirement or source for a larger project.</p>
+        </div>
+
+        <div class="feature">
+          <strong>Multiple Categories</strong>
+          <p>Wires, switches, lighting, fans and protection equipment.</p>
+        </div>
+
+        <div class="feature">
+          <strong>Project Support</strong>
+          <p>Discuss bulk requirements with the procurement desk.</p>
+        </div>
+
+        <div class="feature">
+          <strong>Ghora Nakkas Location</strong>
+          <p>Conveniently positioned in Bhopal's electrical market hub.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CATALOG -->
+<section id="catalog">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+        <div class="kicker">Popular categories</div>
+        <h2 class="section-title">Shop by requirement.</h2>
+      </div>
+
+      <p class="section-description">
+        Demo product cards shown below. Actual inventory and pricing
+        can be connected later.
+      </p>
+
+    </div>
+
+
+    <div class="products">
+
+      <div class="product">
+
+        <div class="product-image">
+          <div class="product-shape wire"></div>
+        </div>
+
+        <div class="product-info">
+          <small>Wires & Cables</small>
+          <h3>FR-LSH House Wire</h3>
+          <p>1.0mm — 6.0mm demo range</p>
+        </div>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-image">
+          <div class="product-shape switch"></div>
+        </div>
+
+        <div class="product-info">
+          <small>Switches</small>
+          <h3>Modular Switch System</h3>
+          <p>Plates, sockets & regulators</p>
+        </div>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-image">
+          <div class="product-shape"></div>
+        </div>
+
+        <div class="product-info">
+          <small>Lighting</small>
+          <h3>LED Tubelight</h3>
+          <p>Energy-efficient lighting solutions</p>
+        </div>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-image">
+          <div class="product-shape fan"></div>
+        </div>
+
+        <div class="product-info">
+          <small>Air Circulation</small>
+          <h3>Ceiling Fan</h3>
+          <p>1200mm demo category</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHOLESALE -->
+<section class="wholesale" id="wholesale">
+
+  <div class="container">
+
+    <div class="wholesale-box">
+
+      <div class="kicker">For contractors & project buyers</div>
+
+      <h2>
+        Your project.<br>
+        Our <span>procurement desk.</span>
+      </h2>
+
+      <p>
+        Working on a house, commercial property, renovation or
+        larger construction project? Send your electrical requirement
+        and let the team prepare a bulk quotation.
+      </p>
+
+      <div class="wholesale-points">
+        <span class="point">Residential Projects</span>
+        <span class="point">Commercial Sites</span>
+        <span class="point">Contractors</span>
+        <span class="point">Builders</span>
+        <span class="point">Bulk Orders</span>
+      </div>
+
+      <a href="#contact" class="btn btn-primary">
+        Start a Project Enquiry →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+<section id="reviews">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+        <div class="kicker">Customer feedback</div>
+        <h2 class="section-title">Trusted locally.</h2>
+      </div>
+
+      <p class="section-description">
+        Public listing information currently shows a 5.0 rating
+        from 3 ratings on Justdial.
+      </p>
+
+    </div>
+
+
+    <div class="reviews">
+
+      <div class="review">
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+          “Superb experience. Got all house wiring and premium
+          modular switch plates in one go.”
+        </p>
+
+        <div class="reviewer">
+          Customer review · Demo presentation
+        </div>
+
+      </div>
+
+
+      <div class="review">
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+          “A convenient destination when you need several
+          electrical requirements from one place.”
+        </p>
+
+        <div class="reviewer">
+          Customer review · Demo presentation
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+  <div class="container contact-grid">
+
+    <div class="contact-info">
+
+      <div class="kicker">Visit / enquire</div>
+
+      <h2>
+        Let's get your<br>
+        <span>requirements sorted.</span>
+      </h2>
+
+      <p>
+        Tell us what you need, whether it's one switchboard
+        or electrical material for an entire project.
+      </p>
+
+
+      <div class="contact-item">
+        <div>⌖</div>
+        <div>
+          <b>Store</b>
+          Shop No. 4, House 60, Hanuman Ganj Choraha,
+          Mangalwara Road, Ghora Nakkas, Bhopal — 462001
+        </div>
+      </div>
+
+
+      <div class="contact-item">
+        <div>☎</div>
+        <div>
+          <b>Call us</b>
+          +91 88392 15043<br>
+          +91 81477 72375
+        </div>
+      </div>
+
+
+      <div class="contact-item">
+        <div>◷</div>
+        <div>
+          <b>Opening hours</b>
+          Monday — Sunday · 09:00 AM — 08:00 PM
+        </div>
+      </div>
+
+    </div>
+
+
+    <form class="contact-form" onsubmit="sendWhatsApp(event)">
+
+      <div class="kicker">Quick enquiry</div>
+
+      <div class="form-row">
+
+        <div class="field">
+          <label>Your name</label>
+          <input id="name" type="text" placeholder="Enter your name" required>
+        </div>
+
+        <div class="field">
+          <label>Phone number</label>
+          <input id="phone" type="tel" placeholder="Your phone" required>
+        </div>
+
+      </div>
+
+
+      <div class="field">
+        <label>What do you need?</label>
+
+        <select id="requirement">
+
+          <option value="">Select requirement</option>
+          <option>Wires & Cables</option>
+          <option>Modular Switches</option>
+          <option>LED Lighting</option>
+          <option>Fans</option>
+          <option>MCB / Switchgear</option>
+          <option>Bulk Project Supply</option>
+          <option>Other</option>
+
+        </select>
+
+      </div>
+
+
+      <div class="field">
+        <label>Message</label>
+
+        <textarea
+          id="message"
+          placeholder="Tell us what products or quantities you need..."
+        ></textarea>
+
+      </div>
+
+
+      <button class="btn btn-primary" type="submit" style="width:100%">
+        Send Enquiry on WhatsApp →
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="container footer-inner">
+
+    <div>
+      © 2026 Karmayogi Electricals. Demo website concept.
+    </div>
+
+    <div class="footer-links">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+
+  document
+    .getElementById("navLinks")
+    .classList.toggle("active");
+
+}
+
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    document
+      .getElementById("navLinks")
+      .classList.remove("active");
+
+  });
+
+});
+
+
+function sendWhatsApp(event){
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("name").value.trim();
+
+  const phone =
+    document.getElementById("phone").value.trim();
+
+  const requirement =
+    document.getElementById("requirement").value;
+
+  const message =
+    document.getElementById("message").value.trim();
+
+
+  const text =
+`Hello Karmayogi Electricals,
+
+My name is ${name}.
+
+Phone: ${phone}
+Requirement: ${requirement || "General enquiry"}
+
+${message || "I would like to know more about your products and pricing."}
+
+Thank you.`;
+
+
+  /*
+    Demo WhatsApp number.
+    Replace this with the shop's verified WhatsApp
+    number before delivering the real website.
+  */
+
+  const whatsappNumber = "918839215043";
+
+  const url =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(text);
+
+  window.open(url,"_blank");
+
+}
+
+</script>
+
+</body>
+</html>
