@@ -1,38 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Karmayogi Electricals | Bhopal</title>
+<title>Karmayogi Electricals — Bhopal</title>
 
-<meta name="description"
-content="Karmayogi Electricals — Electrical products, lighting, wires, switches, fans and project supplies in Bhopal.">
+<meta
+  name="description"
+  content="Karmayogi Electricals — genuine electrical products, trusted brands and wholesale electrical supply in Bhopal."
+>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+  rel="stylesheet"
+>
 
 
 <style>
 
-:root{
-  --blue:#123c66;
-  --blue2:#0b2c4c;
-  --electric:#1677ff;
-  --amber:#f4a72c;
-
-  --cream:#f7f7f3;
-  --white:#ffffff;
-  --soft:#eef2f5;
-
-  --text:#13202b;
-  --muted:#69747d;
-  --line:#e4e8eb;
-
-  --radius:22px;
-}
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
   margin:0;
@@ -46,1479 +39,765 @@ html{
 
 body{
   font-family:"DM Sans",sans-serif;
-  color:var(--text);
-  background:var(--cream);
+  background:#f7f8fa;
+  color:#10253d;
   overflow-x:hidden;
 }
 
 img{
-  display:block;
   width:100%;
+  display:block;
 }
 
 a{
-  text-decoration:none;
   color:inherit;
+  text-decoration:none;
 }
 
 button,
 input,
-textarea,
-select{
+select,
+textarea{
   font:inherit;
 }
 
+:root{
+  --navy:#0d2943;
+  --blue:#1268d9;
+  --blue2:#2785ee;
+  --sky:#eaf4ff;
+  --cream:#faf9f5;
+  --white:#ffffff;
+  --text:#10253d;
+  --muted:#657487;
+  --line:#e2e8ee;
+  --orange:#e6a13a;
+}
 
-/* =========================================
+
+/* =========================================================
    GLOBAL
-========================================= */
+========================================================= */
 
 .container{
-  width:min(1180px,calc(100% - 40px));
+  width:min(1240px,calc(100% - 48px));
   margin:auto;
 }
 
-section{
+.section{
   padding:110px 0;
 }
 
-.section-tag{
-  display:flex;
+.eyebrow{
+  display:inline-flex;
   align-items:center;
   gap:9px;
-
-  color:var(--electric);
-
-  text-transform:uppercase;
-  letter-spacing:1.7px;
-
+  padding:8px 13px;
+  border:1px solid #d8e5f0;
+  background:rgba(255,255,255,.7);
+  border-radius:100px;
+  color:#39709d;
   font-size:11px;
-  font-weight:800;
-
-  margin-bottom:15px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
 }
 
-.section-tag span{
-  width:26px;
-  height:2px;
+.eyebrow-dot{
+  width:7px;
+  height:7px;
+  background:#2381e8;
+  border-radius:50%;
+}
 
-  background:var(--electric);
+.section-label{
+  display:block;
+  margin-bottom:16px;
+  color:#2879ca;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
 }
 
 .section-title{
-  font-family:Manrope,sans-serif;
-
-  font-size:clamp(38px,5vw,62px);
-
-  line-height:1.02;
-
+  font-family:"Manrope",sans-serif;
+  font-size:clamp(38px,5vw,68px);
+  line-height:1.03;
   letter-spacing:-3px;
+  color:var(--navy);
+}
+
+.section-title span{
+  color:#347fbd;
 }
 
 .section-description{
+  max-width:560px;
   color:var(--muted);
-
-  line-height:1.75;
-
-  max-width:480px;
+  line-height:1.8;
+  font-size:15px;
 }
 
-
-/* =========================================
-   TOP BAR
-========================================= */
-
-.topbar{
-  height:36px;
-
-  background:var(--blue2);
-  color:white;
-
-  display:flex;
+.btn{
+  display:inline-flex;
   align-items:center;
+  justify-content:center;
+  gap:12px;
+  min-height:54px;
+  padding:0 23px;
+  border-radius:10px;
+  font-size:13px;
+  font-weight:700;
+  transition:.3s ease;
 }
 
-.topbar-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  font-size:11px;
-
-  color:#d7e1e9;
-}
-
-.topbar-right{
-  display:flex;
-  gap:20px;
-}
-
-.topbar strong{
+.btn-primary{
   color:white;
+  background:var(--blue);
+  box-shadow:0 12px 30px rgba(18,104,217,.22);
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  background:#075fcf;
+}
+
+.btn-secondary{
+  background:white;
+  border:1px solid #dbe3ea;
+}
+
+.btn-secondary:hover{
+  border-color:#9ebbd3;
+  transform:translateY(-3px);
 }
 
 
-/* =========================================
-   NAVIGATION
-========================================= */
+/* =========================================================
+   NAVBAR
+========================================================= */
 
-nav{
-  position:sticky;
+.header{
+  position:fixed;
   top:0;
-
-  z-index:999;
-
-  height:76px;
-
-  background:rgba(255,255,255,.94);
-
-  backdrop-filter:blur(15px);
-
-  border-bottom:1px solid var(--line);
+  left:0;
+  width:100%;
+  z-index:1000;
+  padding:16px 0;
 }
 
-.nav-inner{
-  height:100%;
-
+.navbar{
+  width:min(1240px,calc(100% - 32px));
+  margin:auto;
+  min-height:72px;
+  padding:0 20px;
   display:flex;
   align-items:center;
   justify-content:space-between;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(215,225,234,.9);
+  border-radius:16px;
+  box-shadow:0 12px 40px rgba(15,45,72,.07);
 }
-
-
-/* LOGO */
 
 .logo{
   display:flex;
   align-items:center;
-  gap:12px;
-
-  font-family:Manrope,sans-serif;
-
-  font-weight:800;
-
-  letter-spacing:-.7px;
-
-  font-size:17px;
+  gap:11px;
 }
 
-.logo-symbol{
-  width:38px;
-  height:38px;
-
-  border-radius:11px;
-
-  background:var(--blue);
-
-  color:white;
-
+.logo-mark{
+  width:43px;
+  height:43px;
   display:grid;
   place-items:center;
-
-  font-family:Manrope;
-
-  font-size:18px;
-
-  position:relative;
-
-  overflow:hidden;
+  border-radius:11px;
+  color:white;
+  background:var(--navy);
+  font-family:"Manrope",sans-serif;
+  font-size:21px;
+  font-weight:800;
 }
 
-.logo-symbol::after{
-  content:"";
+.logo-text{
+  display:flex;
+  flex-direction:column;
+  font-family:"Manrope",sans-serif;
+  font-size:15px;
+  font-weight:800;
+  line-height:1.05;
+  color:var(--navy);
+}
 
-  position:absolute;
-
-  width:19px;
-  height:3px;
-
-  background:var(--amber);
-
-  transform:rotate(-45deg);
-
-  bottom:9px;
-  right:2px;
+.logo-text small{
+  margin-top:4px;
+  color:#7890a4;
+  font-family:"DM Sans",sans-serif;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
 }
 
 .nav-links{
   display:flex;
   align-items:center;
-  gap:30px;
+  gap:31px;
 }
 
 .nav-links a{
-  color:#59656f;
-
+  position:relative;
+  color:#526477;
   font-size:13px;
-
   font-weight:600;
-
-  transition:.25s;
+  transition:.25s ease;
 }
 
 .nav-links a:hover{
   color:var(--blue);
 }
 
-.nav-cta{
-  background:var(--blue);
-
-  color:white!important;
-
+.nav-links .nav-cta{
   padding:12px 18px;
-
+  color:white;
+  background:var(--navy);
   border-radius:9px;
-}
-
-.nav-cta:hover{
-  background:var(--electric);
 }
 
 .menu-btn{
   display:none;
-
-  border:0;
-
-  background:none;
-
-  font-size:25px;
-
+  width:43px;
+  height:43px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:white;
   cursor:pointer;
 }
 
+.menu-btn span{
+  display:block;
+  width:18px;
+  height:2px;
+  margin:4px auto;
+  background:var(--navy);
+}
 
-/* =========================================
+
+/* =========================================================
    HERO
-========================================= */
+========================================================= */
 
 .hero{
-  padding:55px 0 80px;
-
+  min-height:850px;
+  padding:155px 0 85px;
+  position:relative;
+  overflow:hidden;
   background:
+    radial-gradient(circle at 80% 25%,#dff0ff 0,transparent 32%),
+    linear-gradient(135deg,#fbfcfd 0%,#f1f7fb 100%);
+}
 
-  radial-gradient(
-    circle at 80% 15%,
-    rgba(22,119,255,.08),
-    transparent 30%
-  ),
-
-  linear-gradient(
-    180deg,
-    #fff,
-    var(--cream)
-  );
+.hero::before{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  right:-250px;
+  bottom:-260px;
+  border-radius:50%;
+  border:1px solid #d9e8f3;
 }
 
 .hero-grid{
+  width:min(1240px,calc(100% - 48px));
+  margin:auto;
   display:grid;
-
-  grid-template-columns:
-    .92fr
-    1.08fr;
-
-  gap:60px;
-
+  grid-template-columns:.9fr 1.1fr;
+  gap:70px;
   align-items:center;
 }
-
-
-/* HERO TEXT */
 
 .hero-copy{
-  padding-top:10px;
-}
-
-.hero-badge{
-  display:inline-flex;
-
-  align-items:center;
-
-  gap:8px;
-
-  padding:8px 12px;
-
-  border-radius:100px;
-
-  background:#eaf3ff;
-
-  color:var(--blue);
-
-  font-size:11px;
-
-  font-weight:800;
-
-  margin-bottom:23px;
-}
-
-.hero-badge i{
-  width:7px;
-  height:7px;
-
-  background:#24b26b;
-
-  border-radius:50%;
-
-  box-shadow:
-    0 0 0 4px
-    rgba(36,178,107,.12);
+  position:relative;
+  z-index:2;
 }
 
 .hero h1{
-  font-family:Manrope,sans-serif;
-
-  font-size:clamp(48px,6vw,78px);
-
-  line-height:.99;
-
-  letter-spacing:-5px;
-
-  color:var(--blue2);
-}
-
-.hero h1 em{
-  color:var(--electric);
-
-  font-style:normal;
-}
-
-.hero-lead{
   margin-top:25px;
-
-  color:var(--muted);
-
-  max-width:570px;
-
-  line-height:1.8;
-
-  font-size:16px;
+  max-width:690px;
+  font-family:"Manrope",sans-serif;
+  font-size:clamp(54px,7vw,94px);
+  line-height:.94;
+  letter-spacing:-5px;
+  color:var(--navy);
 }
 
-.hero-buttons{
+.hero h1 span{
+  display:block;
+  color:#2476c5;
+}
+
+.hero-text{
+  max-width:540px;
+  margin-top:27px;
+  color:#627487;
+  font-size:17px;
+  line-height:1.75;
+}
+
+.hero-actions{
   display:flex;
-
-  gap:12px;
-
   flex-wrap:wrap;
-
-  margin-top:31px;
+  gap:12px;
+  margin-top:34px;
 }
 
-.btn{
-  min-height:50px;
-
-  display:inline-flex;
-
+.hero-note{
+  display:flex;
   align-items:center;
-
-  justify-content:center;
-
-  gap:9px;
-
-  padding:0 20px;
-
-  border-radius:10px;
-
-  font-size:13px;
-
-  font-weight:800;
-
-  transition:.25s;
+  gap:10px;
+  margin-top:25px;
+  color:#718294;
+  font-size:12px;
 }
 
-.btn-primary{
-  background:var(--blue);
-
-  color:white;
-
-  box-shadow:
-    0 10px 25px
-    rgba(18,60,102,.18);
+.hero-note strong{
+  color:var(--navy);
 }
-
-.btn-primary:hover{
-  transform:translateY(-3px);
-
-  background:var(--electric);
-
-  box-shadow:
-    0 14px 30px
-    rgba(22,119,255,.22);
-}
-
-.btn-outline{
-  border:1px solid #d7dde2;
-
-  background:white;
-
-  color:var(--blue);
-}
-
-.btn-outline:hover{
-  border-color:var(--blue);
-
-  transform:translateY(-3px);
-}
-
-
-/* HERO IMAGE */
 
 .hero-visual{
   position:relative;
-
-  min-height:550px;
+  min-height:610px;
 }
 
 .hero-photo{
   position:absolute;
-
-  inset:0;
-
-  border-radius:30px;
-
+  inset:0 0 25px 45px;
   overflow:hidden;
-
-  box-shadow:
-    0 30px 80px
-    rgba(20,42,60,.17);
+  border-radius:25px;
+  box-shadow:0 30px 70px rgba(17,48,76,.16);
 }
 
 .hero-photo img{
+  width:100%;
   height:100%;
-
   object-fit:cover;
 }
 
 .hero-photo::after{
   content:"";
-
   position:absolute;
-
   inset:0;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,0) 45%,
-      rgba(4,20,34,.58)
-    );
+  background:linear-gradient(
+    180deg,
+    rgba(8,35,59,.02),
+    rgba(8,35,59,.24)
+  );
 }
 
-
-/* FLOATING CARD */
-
-.hero-floating{
+.hero-info-card{
   position:absolute;
-
-  left:-28px;
-  bottom:30px;
-
-  z-index:3;
-
-  width:230px;
-
-  padding:18px;
-
+  left:0;
+  bottom:0;
+  width:260px;
+  padding:22px;
+  background:white;
+  border:1px solid #e1e8ee;
   border-radius:17px;
-
-  background:rgba(255,255,255,.94);
-
-  backdrop-filter:blur(15px);
-
-  box-shadow:
-    0 20px 50px
-    rgba(20,40,60,.18);
-
-  border:1px solid rgba(255,255,255,.8);
+  box-shadow:0 22px 50px rgba(19,53,82,.13);
 }
 
-.hero-floating-top{
+.hero-info-top{
   display:flex;
-
-  justify-content:space-between;
-
   align-items:center;
+  justify-content:space-between;
+  margin-bottom:16px;
 }
 
-.hero-floating-icon{
-  width:38px;
-  height:38px;
-
-  border-radius:10px;
-
-  background:#edf5ff;
-
-  color:var(--electric);
-
-  display:grid;
-  place-items:center;
-
-  font-size:19px;
+.hero-info-top span{
+  font-size:10px;
+  color:#71879b;
+  font-weight:800;
+  letter-spacing:1.4px;
 }
 
 .rating{
-  font-size:11px;
-
-  color:#e49a22;
-
+  color:#d89520;
+  font-size:13px;
   font-weight:800;
 }
 
-.hero-floating strong{
-  display:block;
-
-  margin-top:13px;
-
-  font-family:Manrope;
-
-  font-size:17px;
-
-  color:var(--blue2);
+.hero-info-card h3{
+  margin-bottom:7px;
+  font-family:"Manrope",sans-serif;
+  color:var(--navy);
+  font-size:18px;
 }
 
-.hero-floating p{
-  margin-top:5px;
-
-  color:var(--muted);
-
-  font-size:11px;
-
-  line-height:1.5;
+.hero-info-card p{
+  color:#738394;
+  font-size:12px;
+  line-height:1.6;
 }
 
-
-/* HERO PRODUCT STRIP */
-
-.hero-mini-products{
+.hero-tag{
   position:absolute;
-
-  right:-18px;
-  top:35px;
-
-  z-index:3;
-
-  width:145px;
-
-  padding:10px;
-
+  right:-15px;
+  top:55px;
+  padding:15px 18px;
   background:white;
-
-  border-radius:15px;
-
-  box-shadow:
-    0 15px 40px
-    rgba(20,40,60,.13);
+  border:1px solid #dce6ed;
+  border-radius:12px;
+  box-shadow:0 15px 35px rgba(18,50,76,.1);
 }
 
-.hero-mini-products img{
-  height:85px;
-
-  object-fit:cover;
-
-  border-radius:9px;
-}
-
-.hero-mini-products span{
+.hero-tag strong{
   display:block;
+  color:var(--navy);
+  font-family:"Manrope",sans-serif;
+  font-size:15px;
+}
 
-  margin-top:9px;
-
-  color:var(--blue);
-
+.hero-tag span{
+  display:block;
+  margin-top:4px;
+  color:#788b9c;
   font-size:10px;
-
-  font-weight:800;
 }
 
 
-/* =========================================
-   TRUST STRIP
-========================================= */
+/* =========================================================
+   BRAND BAR
+========================================================= */
 
-.trust-strip{
+.brand-bar{
   background:white;
-
   border-top:1px solid var(--line);
-
   border-bottom:1px solid var(--line);
-
-  padding:23px 0;
 }
 
-.trust-inner{
+.brand-bar-inner{
+  min-height:100px;
   display:flex;
-
   align-items:center;
-
-  justify-content:space-between;
-
-  gap:30px;
+  gap:45px;
 }
 
-.trust-title{
-  color:#89939b;
-
+.brand-bar-label{
+  flex-shrink:0;
+  color:#8b9aaa;
   font-size:10px;
-
-  text-transform:uppercase;
-
-  letter-spacing:1.4px;
-
   font-weight:800;
-
-  white-space:nowrap;
+  letter-spacing:1.8px;
 }
 
 .brand-list{
+  width:100%;
   display:flex;
-
   align-items:center;
-
-  justify-content:flex-end;
-
-  flex-wrap:wrap;
-
-  gap:12px;
-}
-
-.brand{
-  padding:10px 17px;
-
-  border:1px solid var(--line);
-
-  border-radius:8px;
-
-  background:#fbfcfc;
-
-  color:#53616b;
-
-  font-size:11px;
-
+  justify-content:space-between;
+  gap:25px;
+  color:#708397;
+  font-family:"Manrope",sans-serif;
+  font-size:14px;
   font-weight:800;
 }
 
-
-/* =========================================
-   CATEGORY SECTION
-========================================= */
-
-.category-section{
-  background:var(--cream);
+.brand-list span{
+  white-space:nowrap;
 }
 
-.category-heading{
+
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+.categories{
+  background:#f7f8fa;
+}
+
+.section-head{
   display:flex;
-
   justify-content:space-between;
-
   align-items:end;
-
-  margin-bottom:45px;
+  gap:40px;
+  margin-bottom:55px;
 }
 
 .category-grid{
   display:grid;
-
-  grid-template-columns:
-    repeat(4,1fr);
-
-  gap:15px;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
 }
 
 .category-card{
   position:relative;
-
-  height:310px;
-
-  border-radius:20px;
-
+  min-height:410px;
   overflow:hidden;
-
+  border-radius:18px;
   background:white;
-
-  box-shadow:
-    0 8px 25px
-    rgba(30,50,70,.06);
-
-  transition:.35s;
+  border:1px solid #e0e7ed;
+  transition:.35s ease;
 }
 
 .category-card:hover{
-  transform:translateY(-7px);
-
-  box-shadow:
-    0 20px 45px
-    rgba(30,50,70,.13);
+  transform:translateY(-8px);
+  box-shadow:0 25px 55px rgba(16,48,76,.11);
 }
 
 .category-image{
-  height:100%;
-
-  position:relative;
+  height:245px;
+  overflow:hidden;
+  background:#edf3f7;
 }
 
 .category-image img{
   height:100%;
-
   object-fit:cover;
-
-  transition:.5s;
+  transition:.6s ease;
 }
 
-.category-card:hover
-.category-image img{
+.category-card:hover .category-image img{
   transform:scale(1.06);
 }
 
-.category-image::after{
-  content:"";
-
-  position:absolute;
-
-  inset:0;
-
-  background:
-    linear-gradient(
-      180deg,
-      transparent 30%,
-      rgba(5,20,35,.78)
-    );
-}
-
 .category-content{
-  position:absolute;
-
-  left:20px;
-  right:20px;
-  bottom:19px;
-
-  z-index:2;
-
-  color:white;
+  padding:22px;
 }
 
 .category-number{
+  color:#9aa9b6;
   font-size:10px;
-
-  color:#d8e8f7;
-
-  font-weight:700;
-
-  opacity:.8;
+  font-weight:800;
+  letter-spacing:1.5px;
 }
 
 .category-content h3{
-  font-family:Manrope;
-
+  margin-top:8px;
+  font-family:"Manrope",sans-serif;
+  color:var(--navy);
   font-size:20px;
-
-  margin-top:5px;
 }
 
 .category-content p{
-  margin-top:5px;
-
-  color:#d8e0e6;
-
-  font-size:11px;
-
-  line-height:1.5;
+  margin-top:7px;
+  color:#718192;
+  font-size:12px;
+  line-height:1.6;
 }
 
-.category-arrow{
-  position:absolute;
-
-  right:18px;
-  bottom:20px;
-
-  width:32px;
-  height:32px;
-
-  border-radius:50%;
-
-  background:white;
-
+.category-link{
+  display:inline-flex;
+  margin-top:15px;
   color:var(--blue);
-
-  display:grid;
-  place-items:center;
-
-  font-size:15px;
-}
-
-
-/* =========================================
-   WHY KARMAYOGI
-========================================= */
-
-.why{
-  background:white;
-}
-
-.why-grid{
-  display:grid;
-
-  grid-template-columns:
-    1fr
-    1fr;
-
-  gap:80px;
-
-  align-items:center;
-}
-
-.why-image{
-  position:relative;
-
-  height:560px;
-
-  border-radius:27px;
-
-  overflow:hidden;
-}
-
-.why-image img{
-  height:100%;
-
-  object-fit:cover;
-}
-
-.why-image::after{
-  content:"";
-
-  position:absolute;
-
-  inset:0;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,0),
-      rgba(8,30,50,.3)
-    );
-}
-
-.experience-card{
-  position:absolute;
-
-  left:25px;
-  bottom:25px;
-
-  z-index:2;
-
-  padding:18px 20px;
-
-  background:white;
-
-  border-radius:14px;
-
-  box-shadow:
-    0 15px 40px
-    rgba(0,0,0,.15);
-}
-
-.experience-card strong{
-  display:block;
-
-  color:var(--blue);
-
-  font-family:Manrope;
-
-  font-size:24px;
-}
-
-.experience-card span{
-  color:var(--muted);
-
-  font-size:10px;
-}
-
-
-/* WHY COPY */
-
-.why-copy h2{
-  font-family:Manrope;
-
-  font-size:clamp(37px,4.5vw,58px);
-
-  letter-spacing:-3px;
-
-  line-height:1.04;
-
-  color:var(--blue2);
-}
-
-.why-copy h2 span{
-  color:var(--electric);
-}
-
-.why-copy > p{
-  color:var(--muted);
-
-  line-height:1.8;
-
-  margin-top:22px;
-
-  max-width:530px;
-}
-
-.benefit-list{
-  margin-top:34px;
-
-  display:grid;
-
-  gap:17px;
-}
-
-.benefit{
-  display:flex;
-
-  gap:14px;
-
-  align-items:flex-start;
-
-  padding-bottom:17px;
-
-  border-bottom:1px solid var(--line);
-}
-
-.benefit-icon{
-  flex:none;
-
-  width:38px;
-  height:38px;
-
-  border-radius:10px;
-
-  background:#edf5ff;
-
-  color:var(--electric);
-
-  display:grid;
-  place-items:center;
-
-  font-weight:900;
-}
-
-.benefit strong{
-  font-size:13px;
-
-  color:var(--blue2);
-}
-
-.benefit p{
-  margin-top:4px;
-
-  color:var(--muted);
-
   font-size:11px;
-
-  line-height:1.5;
+  font-weight:800;
 }
 
 
-/* =========================================
-   PRODUCT SHOWCASE
-========================================= */
+/* =========================================================
+   PRODUCTS INTRO
+========================================================= */
 
-.products-section{
-  background:#f2f5f7;
+.products{
+  background:white;
 }
 
-.products-heading{
+.products-head{
   display:flex;
-
   align-items:end;
-
   justify-content:space-between;
-
-  margin-bottom:43px;
+  gap:40px;
+  margin-bottom:50px;
 }
+
+.products-tabs{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.products-tabs button{
+  padding:11px 16px;
+  border:1px solid #dce5ec;
+  background:white;
+  border-radius:8px;
+  color:#64778a;
+  font-size:11px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.products-tabs button:hover,
+.products-tabs button.active{
+  color:white;
+  border-color:var(--navy);
+  background:var(--navy);
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
 
 .product-grid{
   display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:17px;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
 
 .product-card{
-  background:white;
-
-  border:1px solid #e8ecef;
-
-  border-radius:19px;
-
   overflow:hidden;
-
-  transition:.3s;
+  border:1px solid #e1e7ec;
+  border-radius:17px;
+  background:#fafbfc;
+  transition:.3s ease;
 }
 
 .product-card:hover{
   transform:translateY(-5px);
-
-  box-shadow:
-    0 18px 45px
-    rgba(25,50,70,.1);
+  box-shadow:0 20px 45px rgba(20,51,77,.1);
 }
 
-.product-photo{
-  height:255px;
-
+.product-image{
+  height:300px;
   position:relative;
-
-  background:#eef2f4;
-
   overflow:hidden;
+  background:#edf2f5;
 }
 
-.product-photo img{
+.product-image img{
   height:100%;
-
   object-fit:cover;
-
-  transition:.45s;
+  transition:.5s ease;
 }
 
-.product-card:hover .product-photo img{
-  transform:scale(1.05);
+.product-card:hover .product-image img{
+  transform:scale(1.04);
 }
 
-.product-tag{
+.product-badge{
   position:absolute;
-
   top:14px;
   left:14px;
-
   padding:7px 10px;
-
-  border-radius:7px;
-
+  border-radius:6px;
   background:white;
-
-  color:var(--blue);
-
+  color:#386887;
   font-size:9px;
-
   font-weight:800;
-
-  box-shadow:
-    0 5px 15px
-    rgba(0,0,0,.08);
+  letter-spacing:1px;
 }
 
-.product-details{
-  padding:19px;
+.product-info{
+  padding:22px;
 }
 
 .product-brand{
-  color:var(--electric);
-
-  text-transform:uppercase;
-
-  letter-spacing:1px;
-
+  color:#8b9baa;
   font-size:9px;
-
   font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
 }
 
-.product-details h3{
-  margin-top:7px;
-
-  font-family:Manrope;
-
-  color:var(--blue2);
-
-  font-size:17px;
+.product-info h3{
+  margin-top:8px;
+  font-family:"Manrope",sans-serif;
+  color:var(--navy);
+  font-size:20px;
 }
 
-.product-details p{
-  margin-top:6px;
-
-  color:var(--muted);
-
-  font-size:11px;
-
-  line-height:1.5;
+.product-info p{
+  margin-top:8px;
+  color:#718192;
+  font-size:12px;
+  line-height:1.6;
 }
 
 .product-bottom{
-  margin-top:17px;
-
   display:flex;
-
+  align-items:center;
   justify-content:space-between;
-
-  align-items:center;
-}
-
-.ask-price{
-  color:var(--blue);
-
-  font-size:11px;
-
-  font-weight:800;
-}
-
-.product-link{
-  width:32px;
-  height:32px;
-
-  border-radius:50%;
-
-  background:#edf5ff;
-
-  color:var(--electric);
-
-  display:grid;
-  place-items:center;
-}
-
-
-/* =========================================
-   BRANDS / QUALITY
-========================================= */
-
-.brands-section{
-  background:white;
-}
-
-.brands-layout{
-  display:grid;
-
-  grid-template-columns:
-    .8fr
-    1.2fr;
-
-  gap:80px;
-
-  align-items:center;
-}
-
-.brands-copy h2{
-  font-family:Manrope;
-
-  font-size:clamp(38px,4.5vw,58px);
-
-  letter-spacing:-3px;
-
-  line-height:1.04;
-
-  color:var(--blue2);
-}
-
-.brands-copy h2 span{
-  color:var(--electric);
-}
-
-.brands-copy p{
   margin-top:20px;
-
-  color:var(--muted);
-
-  line-height:1.75;
-
-  font-size:14px;
+  padding-top:16px;
+  border-top:1px solid #e2e7eb;
 }
 
-.brand-wall{
-  display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:12px;
-}
-
-.brand-box{
-  height:120px;
-
-  border:1px solid var(--line);
-
-  border-radius:15px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  background:#fbfcfc;
-
-  font-family:Manrope;
-
-  font-size:15px;
-
-  font-weight:800;
-
-  color:#5c6973;
-
-  transition:.25s;
-}
-
-.brand-box:hover{
-  border-color:#b8d5f0;
-
-  background:#f4f9ff;
-
-  color:var(--blue);
-}
-
-.brand-box small{
-  display:block;
-
-  font-family:"DM Sans";
-
-  font-size:8px;
-
-  font-weight:600;
-
-  text-align:center;
-
-  color:#9ba4aa;
-
-  margin-top:4px;
-}
-
-
-/* =========================================
-   WHOLESALE CTA
-========================================= */
-
-.wholesale-section{
-  padding-top:30px;
-
-  padding-bottom:110px;
-}
-
-.wholesale-box{
-  min-height:470px;
-
-  border-radius:28px;
-
-  overflow:hidden;
-
-  position:relative;
-
-  background:var(--blue2);
-
-  display:grid;
-
-  grid-template-columns:
-    1fr
-    .85fr;
-}
-
-.wholesale-image{
-  position:absolute;
-
-  right:0;
-  top:0;
-  bottom:0;
-
-  width:49%;
-
-  overflow:hidden;
-}
-
-.wholesale-image img{
-  height:100%;
-
-  object-fit:cover;
-}
-
-.wholesale-image::after{
-  content:"";
-
-  position:absolute;
-
-  inset:0;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--blue2),
-      rgba(11,44,76,.15)
-    );
-}
-
-.wholesale-content{
-  position:relative;
-
-  z-index:2;
-
-  padding:70px 0 70px 65px;
-
-  max-width:670px;
-}
-
-.wholesale-content .section-tag{
-  color:#78b6ff;
-}
-
-.wholesale-content .section-tag span{
-  background:#78b6ff;
-}
-
-.wholesale-content h2{
-  font-family:Manrope;
-
-  color:white;
-
-  font-size:clamp(40px,5vw,63px);
-
-  letter-spacing:-3.5px;
-
-  line-height:1.02;
-}
-
-.wholesale-content h2 em{
-  color:#67aaff;
-
-  font-style:normal;
-}
-
-.wholesale-content p{
-  margin-top:22px;
-
-  color:#b8c9d7;
-
-  line-height:1.75;
-
-  max-width:540px;
-}
-
-.wholesale-points{
-  display:flex;
-
-  flex-wrap:wrap;
-
-  gap:8px;
-
-  margin-top:26px;
-
-  margin-bottom:29px;
-}
-
-.wholesale-point{
-  padding:9px 12px;
-
-  border-radius:7px;
-
-  background:rgba(255,255,255,.08);
-
-  color:#d8e5ee;
-
+.product-bottom span{
+  color:#607386;
   font-size:10px;
-
-  border:1px solid rgba(255,255,255,.09);
+  font-weight:700;
 }
 
-.wholesale-content .btn-primary{
-  background:white;
-
+.product-bottom a{
   color:var(--blue);
-
-  box-shadow:none;
-}
-
-.wholesale-content .btn-primary:hover{
-  background:#edf6ff;
+  font-size:11px;
+  font-weight:800;
 }
 
 
-/* =========================================
-   RESPONSIVE PARTIAL
-========================================= */
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-@media(max-width:950px){
-
-  .nav-links{
-    gap:18px;
-  }
+@media(max-width:1050px){
 
   .hero-grid{
     grid-template-columns:1fr;
   }
 
+  .hero{
+    padding-top:135px;
+  }
+
   .hero-visual{
-    min-height:520px;
+    min-height:550px;
   }
 
   .category-grid{
-    grid-template-columns:
-      repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
   }
 
-  .why-grid{
-    grid-template-columns:1fr;
-
-    gap:50px;
+  .brand-list{
+    flex-wrap:wrap;
+    justify-content:flex-start;
   }
 
-  .why-image{
-    height:500px;
-  }
-
-  .brands-layout{
-    grid-template-columns:1fr;
-
-    gap:45px;
-  }
-
-  .wholesale-box{
-    grid-template-columns:1fr;
-  }
-
-  .wholesale-image{
-    width:45%;
-  }
 }
 
 
-@media(max-width:700px){
+@media(max-width:760px){
 
   .container{
-    width:min(100% - 28px,1180px);
+    width:min(100% - 28px,1240px);
   }
 
-  .topbar{
-    display:none;
+  .section{
+    padding:75px 0;
   }
 
-  nav{
-    height:68px;
+  .navbar{
+    width:calc(100% - 20px);
   }
 
   .nav-links{
     display:none;
-
     position:absolute;
-
-    top:68px;
-
-    left:14px;
-    right:14px;
-
+    top:80px;
+    left:10px;
+    right:10px;
     padding:18px;
-
-    background:white;
-
-    border:1px solid var(--line);
-
-    border-radius:14px;
-
-    box-shadow:
-      0 15px 40px
-      rgba(20,40,60,.12);
-
     flex-direction:column;
-
     align-items:stretch;
-
     gap:5px;
+    background:white;
+    border:1px solid var(--line);
+    border-radius:14px;
+    box-shadow:0 20px 40px rgba(10,40,65,.12);
   }
 
   .nav-links.active{
@@ -1526,11 +805,7 @@ nav{
   }
 
   .nav-links a{
-    padding:12px;
-  }
-
-  .nav-cta{
-    text-align:center;
+    padding:13px;
   }
 
   .menu-btn{
@@ -1538,175 +813,114 @@ nav{
   }
 
   .hero{
-    padding-top:48px;
+    min-height:auto;
+    padding:125px 0 60px;
+  }
+
+  .hero-grid{
+    width:calc(100% - 28px);
+    gap:45px;
   }
 
   .hero h1{
-    font-size:52px;
+    font-size:55px;
+    letter-spacing:-3px;
+  }
 
-    letter-spacing:-3.5px;
+  .hero-text{
+    font-size:15px;
   }
 
   .hero-visual{
-    min-height:410px;
+    min-height:440px;
   }
 
-  .hero-floating{
+  .hero-photo{
+    left:0;
+    bottom:20px;
+  }
+
+  .hero-tag{
+    right:0;
+    top:25px;
+  }
+
+  .hero-info-card{
     left:10px;
-    bottom:18px;
-
-    width:205px;
   }
 
-  .hero-mini-products{
-    right:10px;
-    top:18px;
-  }
-
-  .trust-inner{
+  .brand-bar-inner{
+    padding:22px 0;
     display:block;
   }
 
-  .trust-title{
-    margin-bottom:15px;
+  .brand-bar-label{
+    display:block;
+    margin-bottom:20px;
   }
 
   .brand-list{
-    justify-content:flex-start;
+    gap:18px;
   }
 
-  section{
-    padding:78px 0;
-  }
-
-  .category-heading,
-  .products-heading{
+  .section-head,
+  .products-head{
     display:block;
   }
 
-  .category-heading .section-description,
-  .products-heading .section-description{
-    margin-top:17px;
+  .section-description{
+    margin-top:20px;
   }
 
-  .category-grid{
-    grid-template-columns:1fr;
+  .products-tabs{
+    margin-top:25px;
   }
 
-  .category-card{
-    height:300px;
-  }
-
+  .category-grid,
   .product-grid{
     grid-template-columns:1fr;
   }
 
-  .product-photo{
-    height:280px;
-  }
-
-  .why-image{
-    height:430px;
-  }
-
-  .brand-wall{
-    grid-template-columns:
-      repeat(2,1fr);
-  }
-
-  .wholesale-section{
-    padding-top:0;
-  }
-
-  .wholesale-box{
-    min-height:570px;
-  }
-
-  .wholesale-image{
-    width:100%;
-    height:230px;
-
-    top:auto;
-    bottom:0;
-  }
-
-  .wholesale-image::after{
-    background:
-      linear-gradient(
-        180deg,
-        var(--blue2),
-        rgba(11,44,76,.1)
-      );
-  }
-
-  .wholesale-content{
-    padding:42px 25px;
-  }
-
-  .wholesale-content h2{
-    letter-spacing:-2.5px;
-  }
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================================
-     TOP BAR
-========================================= -->
+<!-- =======================================================
+     NAVIGATION
+======================================================= -->
 
-<div class="topbar">
+<header class="header">
 
-  <div class="container topbar-inner">
-
-    <div>
-      <strong>BHOPAL'S ELECTRICAL SUPPLY DESTINATION</strong>
-    </div>
-
-    <div class="topbar-right">
-      <span>Mon — Sun</span>
-      <span>09:00 AM — 08:00 PM</span>
-    </div>
-
-  </div>
-
-</div>
-
-
-<!-- =========================================
-     NAV
-========================================= -->
-
-<nav>
-
-  <div class="container nav-inner">
+  <div class="navbar">
 
     <a href="#" class="logo">
 
-      <div class="logo-symbol">
+      <span class="logo-mark">
         K
-      </div>
+      </span>
 
-      KARMAYOGI
-      <span style="font-weight:500;color:#7b858d">
-        ELECTRICALS
+      <span class="logo-text">
+        Karmayogi
+        <small>Electricals</small>
       </span>
 
     </a>
 
 
-    <div class="nav-links" id="navLinks">
+    <nav class="nav-links" id="navLinks">
+
+      <a href="#home">
+        Home
+      </a>
 
       <a href="#categories">
         Categories
-      </a>
-
-      <a href="#about">
-        About
       </a>
 
       <a href="#products">
@@ -1717,8 +931,8 @@ nav{
         Brands
       </a>
 
-      <a href="#contact">
-        Contact
+      <a href="#about">
+        About
       </a>
 
       <a href="#contact" class="nav-cta">
@@ -1727,121 +941,137 @@ nav{
 
     </nav>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+
+    <button class="menu-btn" id="menuBtn">
+
       <span></span>
       <span></span>
       <span></span>
+
     </button>
 
   </div>
+
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
 
-<main>
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<main id="home">
 
 <section class="hero">
 
-  <div class="hero-content">
+  <div class="hero-grid">
 
-    <div class="eyebrow">
-      <span class="eyebrow-dot"></span>
-      Trusted Electrical Store • Bhopal
-    </div>
 
-    <h1>
-      Powering
-      <span>every space.</span>
-    </h1>
+    <div class="hero-copy">
 
-    <p class="hero-text">
-      Genuine electrical products, trusted brands and dependable
-      supply for homes, businesses and large-scale projects.
-    </p>
+      <div class="eyebrow">
 
-    <div class="hero-actions">
+        <span class="eyebrow-dot"></span>
 
-      <a href="#products" class="btn btn-primary">
-        Explore Products
-        <span>→</span>
-      </a>
+        Electricals • Bhopal
 
-      <a href="#contact" class="btn btn-secondary">
-        Talk to Us
-      </a>
-
-    </div>
-
-    <div class="hero-meta">
-
-      <div>
-        <strong>5.0</strong>
-        <span>Public Rating</span>
       </div>
 
-      <div class="meta-line"></div>
 
-      <div>
-        <strong>11+</strong>
-        <span>Major Brands</span>
+      <h1>
+
+        Powering
+        <span>every space.</span>
+
+      </h1>
+
+
+      <p class="hero-text">
+
+        Genuine electrical products, trusted brands and
+        dependable supply for homes, businesses,
+        contractors and projects across Bhopal.
+
+      </p>
+
+
+      <div class="hero-actions">
+
+        <a href="#products" class="btn btn-primary">
+
+          Explore Products
+
+          <span>→</span>
+
+        </a>
+
+
+        <a href="#contact" class="btn btn-secondary">
+
+          Talk to Karmayogi
+
+        </a>
+
       </div>
 
-      <div class="meta-line"></div>
 
-      <div>
-        <strong>11 Hrs</strong>
-        <span>Daily Open</span>
-      </div>
+      <div class="hero-note">
 
-    </div>
+        <strong>09:00 AM — 08:00 PM</strong>
 
-  </div>
+        <span>•</span>
 
+        Open Monday to Sunday
 
-  <div class="hero-visual">
-
-    <div class="hero-image-wrap">
-
-      <img
-        src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=85"
-        alt="Professional electrical installation"
-      >
-
-      <div class="image-overlay"></div>
-
-    </div>
-
-
-    <div class="floating-card floating-card-top">
-
-      <div class="floating-icon">
-        ✓
-      </div>
-
-      <div>
-        <strong>Genuine Products</strong>
-        <span>Trusted electrical brands</span>
       </div>
 
     </div>
 
 
-    <div class="floating-card floating-card-bottom">
 
-      <span class="mini-label">
-        WHOLESALE
-      </span>
+    <div class="hero-visual">
 
-      <strong>
-        Bulk & Project Supply
-      </strong>
+      <div class="hero-photo">
 
-      <span>
-        Ask us for your requirement
-      </span>
+        <img
+          src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1400&q=90"
+          alt="Electrical installation and wiring"
+        >
+
+      </div>
+
+
+      <div class="hero-tag">
+
+        <strong>Genuine Electricals</strong>
+
+        <span>Trusted brands under one roof</span>
+
+      </div>
+
+
+      <div class="hero-info-card">
+
+        <div class="hero-info-top">
+
+          <span>LOCAL • TRUSTED • READY</span>
+
+          <span class="rating">
+            ★ 5.0
+          </span>
+
+        </div>
+
+        <h3>
+          Karmayogi Electricals
+        </h3>
+
+        <p>
+          Shop No. 4, Mangalwara Road,
+          Ghora Nakkas, Bhopal.
+        </p>
+
+      </div>
 
     </div>
 
@@ -1850,19 +1080,22 @@ nav{
 </section>
 
 
-<!-- =========================
-     TRUST STRIP
-========================= -->
 
-<section class="trust-strip">
+<!-- =======================================================
+     BRANDS BAR
+======================================================= -->
 
-  <div class="trust-inner">
+<section class="brand-bar">
 
-    <span class="trust-label">
-      BRANDS YOU CAN TRUST
+  <div class="container brand-bar-inner">
+
+    <span class="brand-bar-label">
+      BRANDS AVAILABLE
     </span>
 
-    <div class="brand-names">
+
+    <div class="brand-list">
+
       <span>HAVELLS</span>
       <span>POLYCAB</span>
       <span>FINOLEX</span>
@@ -1870,7 +1103,7 @@ nav{
       <span>LEGRAND</span>
       <span>SCHNEIDER</span>
       <span>CROMPTON</span>
-      <span>USHА</span>
+
     </div>
 
   </div>
@@ -1878,107 +1111,709 @@ nav{
 </section>
 
 
-<!-- =========================
+
+<!-- =======================================================
      CATEGORIES
-========================= -->
+======================================================= -->
 
-<section class="section categories-section" id="products">
+<section class="section categories" id="categories">
 
-  <div class="section-heading">
+  <div class="container">
+
+
+    <div class="section-head">
+
+      <div>
+
+        <span class="section-label">
+          SHOP BY CATEGORY
+        </span>
+
+        <h2 class="section-title">
+
+          Electrical essentials,
+          <span>done right.</span>
+
+        </h2>
+
+      </div>
+
+
+      <p class="section-description">
+
+        Explore the core categories available at
+        Karmayogi Electricals — from everyday home
+        electricals to professional project requirements.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="category-grid">
+
+
+      <article class="category-card">
+
+        <div class="category-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=900&q=90"
+            alt="Electrical wires and cables"
+          >
+
+        </div>
+
+
+        <div class="category-content">
+
+          <span class="category-number">
+            01 / CABLES
+          </span>
+
+          <h3>
+            Wires & Cables
+          </h3>
+
+          <p>
+            Wiring solutions for residential,
+            commercial and project applications.
+          </p>
+
+          <a href="#products" class="category-link">
+            View products →
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="category-card">
+
+        <div class="category-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=900&q=90"
+            alt="Electrical switches and sockets"
+          >
+
+        </div>
+
+
+        <div class="category-content">
+
+          <span class="category-number">
+            02 / SWITCHES
+          </span>
+
+          <h3>
+            Switches & Sockets
+          </h3>
+
+          <p>
+            Modern modular switches, sockets
+            and electrical accessories.
+          </p>
+
+          <a href="#products" class="category-link">
+            View products →
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="category-card">
+
+        <div class="category-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=900&q=90"
+            alt="LED lighting products"
+          >
+
+        </div>
+
+
+        <div class="category-content">
+
+          <span class="category-number">
+            03 / LIGHTING
+          </span>
+
+          <h3>
+            Lighting & LED
+          </h3>
+
+          <p>
+            LED lighting solutions for homes,
+            shops, offices and commercial spaces.
+          </p>
+
+          <a href="#products" class="category-link">
+            View products →
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="category-card">
+
+                <div class="category-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=900&q=90"
+            alt="Electrical switches and sockets"
+          >
+
+        </div>
+
+
+        <div class="category-content">
+
+          <span class="category-number">
+            02 / SWITCHES
+          </span>
+
+          <h3>
+            Switches & Sockets
+          </h3>
+
+          <p>
+            Modern modular switches, sockets
+            and electrical accessories.
+          </p>
+
+          <a href="#products" class="category-link">
+            View products →
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="category-card">
+
+        <div class="category-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=900&q=90"
+            alt="LED lighting products"
+          >
+
+        </div>
+
+
+        <div class="category-content">
+
+          <span class="category-number">
+            03 / LIGHTING
+          </span>
+
+          <h3>
+            Lighting & LED
+          </h3>
+
+          <p>
+            LED lighting solutions for homes,
+            shops, offices and commercial spaces.
+          </p>
+
+          <a href="#products" class="category-link">
+            View products →
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="category-card">
+
+        <div class="category-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=900&q=90"
+            alt="Ceiling fan"
+          >
+
+        </div>
+
+
+        <div class="category-content">
+
+          <span class="category-number">
+            04 / FANS
+          </span>
+
+          <h3>
+            Fans
+          </h3>
+
+          <p>
+            Ceiling and air circulation solutions
+            from established brands.
+          </p>
+
+          <a href="#products" class="category-link">
+            View products →
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     PRODUCTS SECTION
+======================================================= -->
+
+<section class="section products" id="products">
+
+  <div class="container">
+
+    <div class="products-head">
+
+      <div>
+
+        <span class="section-label">
+          PRODUCT COLLECTION
+        </span>
+
+        <h2 class="section-title">
+
+          Find what your
+          <span>space needs.</span>
+
+        </h2>
+
+      </div>
+
+      <p class="section-description">
+
+        Explore our electrical product categories.
+        For exact models, prices and current stock,
+        contact the store directly.
+
+      </p>
+
+    </div>
+
+
+    <div class="products-tabs">
+
+      <button class="active" data-filter="all">
+        All
+      </button>
+
+      <button data-filter="wires">
+        Wires & Cables
+      </button>
+
+      <button data-filter="switches">
+        Switches
+      </button>
+
+      <button data-filter="lighting">
+        Lighting
+      </button>
+
+      <button data-filter="fans">
+        Fans
+      </button>
+
+      <button data-filter="switchgear">
+        Switchgear
+      </button>
+
+    </div>
+
+
+    <div class="product-grid" id="productGrid">
+
+
+      <!-- PRODUCT 01 -->
+
+      <article
+        class="product-card"
+        data-category="wires"
+      >
+
+        <div class="product-image">
+
+          <span class="product-badge">
+            WIRES & CABLES
+          </span>
+
+          <img
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=90"
+            alt="Electrical wires and cables"
+          >
+
+        </div>
+
+
+        <div class="product-info">
+
+          <span class="product-brand">
+            POLYCAB • HAVELLS • FINOLEX
+          </span>
+
+          <h3>
+            House Wires
+          </h3>
+
+          <p>
+            Wiring solutions for homes,
+            shops and commercial installations.
+          </p>
+
+
+          <div class="product-bottom">
+
+            <span>
+              Check availability
+            </span>
+
+            <a href="#contact">
+              Enquire →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PRODUCT 02 -->
+
+      <article
+        class="product-card"
+        data-category="switches"
+      >
+
+        <div class="product-image">
+
+          <span class="product-badge">
+            SWITCHES
+          </span>
+
+          <img
+            src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1000&q=90"
+            alt="Modular electrical switches"
+          >
+
+        </div>
+
+
+        <div class="product-info">
+
+          <span class="product-brand">
+            ANCHOR • LEGRAND • SCHNEIDER
+          </span>
+
+          <h3>
+            Modular Switches
+          </h3>
+
+          <p>
+            Modern switches, sockets and
+            modular accessories.
+          </p>
+
+
+          <div class="product-bottom">
+
+            <span>
+              Check availability
+            </span>
+
+            <a href="#contact">
+              Enquire →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PRODUCT 03 -->
+
+      <article
+        class="product-card"
+        data-category="lighting"
+      >
+
+        <div class="product-image">
+
+          <span class="product-badge">
+            LIGHTING
+          </span>
+
+          <img
+            src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=1000&q=90"
+            alt="LED lighting products"
+          >
+
+        </div>
+
+
+        <div class="product-info">
+
+          <span class="product-brand">
+            PHILIPS • SYSKA • HAVELLS
+          </span>
+
+          <h3>
+            LED Lighting
+          </h3>
+
+          <p>
+            LED solutions for residential,
+            retail and commercial spaces.
+          </p>
+
+
+          <div class="product-bottom">
+
+            <span>
+              Check availability
+            </span>
+
+            <a href="#contact">
+              Enquire →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PRODUCT 04 -->
+
+      <article
+        class="product-card"
+        data-category="fans"
+      >
+
+        <div class="product-image">
+
+          <span class="product-badge">
+            FANS
+          </span>
+
+          <img
+            src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=1000&q=90"
+            alt="Ceiling fan"
+          >
+
+        </div>
+
+
+        <div class="product-info">
+
+          <span class="product-brand">
+            CROMPTON • ORIENT • USHA
+          </span>
+
+          <h3>
+            Fans
+          </h3>
+
+          <p>
+            Air circulation solutions from
+            established electrical brands.
+          </p>
+
+
+          <div class="product-bottom">
+
+            <span>
+              Check availability
+            </span>
+
+            <a href="#contact">
+              Enquire →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PRODUCT 05 -->
+
+      <article
+        class="product-card"
+        data-category="switchgear"
+      >
+
+        <div class="product-image">
+
+          <span class="product-badge">
+            SWITCHGEAR
+          </span>
+
+          <img
+            src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1000&q=90"
+            alt="Electrical switchgear"
+          >
+
+        </div>
+
+
+        <div class="product-info">
+
+          <span class="product-brand">
+            HAGER • SCHNEIDER • L&T
+          </span>
+
+          <h3>
+            MCB & RCCB
+          </h3>
+
+          <p>
+            Electrical protection and switchgear
+            for safer installations.
+          </p>
+
+
+          <div class="product-bottom">
+
+            <span>
+              Check availability
+            </span>
+
+            <a href="#contact">
+              Enquire →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PRODUCT 06 -->
+
+      <article
+        class="product-card"
+        data-category="lighting"
+      >
+
+        <div class="product-image">
+
+          <span class="product-badge">
+            LIGHTING
+          </span>
+
+          <img
+            src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1000&q=90"
+            alt="Interior lighting"
+          >
+
+        </div>
+
+
+        <div class="product-info">
+
+          <span class="product-brand">
+            MULTIPLE BRANDS
+          </span>
+
+          <h3>
+            Decorative Lighting
+          </h3>
+
+          <p>
+            Lighting options for homes,
+            shops and interior projects.
+          </p>
+
+
+          <div class="product-bottom">
+
+            <span>
+              Check availability
+            </span>
+
+            <a href="#contact">
+              Enquire →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     PRODUCT CTA
+======================================================= -->
+
+<section class="product-cta">
+
+  <div class="container product-cta-inner">
 
     <div>
-      <span class="section-kicker">
-        WHAT WE SUPPLY
+
+      <span>
+        LOOKING FOR SOMETHING SPECIFIC?
       </span>
 
       <h2>
-        Everything electrical,<br>
-        <span>under one roof.</span>
+        Tell us what you need.
       </h2>
+
     </div>
 
-    <p>
-      From everyday electrical essentials to project-scale
-      requirements, find products from brands you already trust.
-    </p>
 
-  </div>
+    <a href="#contact" class="btn btn-primary">
 
+      Ask About a Product
 
-  <div class="category-grid">
-
-    <a href="#products" class="category-card">
-
-      <div class="category-image">
-        <img
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=85"
-          alt="Electrical wires and cables"
-        >
-      </div>
-
-      <div class="category-info">
-        <span>01</span>
-        <h3>Wires & Cables</h3>
-        <p>Reliable wiring solutions for homes and projects.</p>
-        <b>Explore →</b>
-      </div>
-
-    </a>
-
-
-    <a href="#products" class="category-card">
-
-      <div class="category-image">
-        <img
-          src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=900&q=85"
-          alt="Modern electrical switches"
-        >
-      </div>
-
-      <div class="category-info">
-        <span>02</span>
-        <h3>Modular Switches</h3>
-        <p>Modern switches and accessories for every space.</p>
-        <b>Explore →</b>
-      </div>
-
-    </a>
-
-
-    <a href="#products" class="category-card">
-
-      <div class="category-image">
-        <img
-          src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=900&q=85"
-          alt="LED lighting"
-        >
-      </div>
-
-      <div class="category-info">
-        <span>03</span>
-        <h3>Lighting & LED</h3>
-        <p>Bright, efficient lighting for residential and commercial spaces.</p>
-        <b>Explore →</b>
-      </div>
-
-    </a>
-
-
-    <a href="#products" class="category-card">
-
-      <div class="category-image">
-        <img
-          src="https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=900&q=85"
-          alt="Ceiling fan"
-        >
-      </div>
-
-      <div class="category-info">
-        <span>04</span>
-        <h3>Fans</h3>
-        <p>Efficient and stylish fans from leading brands.</p>
-        <b>Explore →</b>
-      </div>
+      <span>→</span>
 
     </a>
 
@@ -1987,829 +1822,497 @@ nav{
 </section>
 
 
-<!-- =========================
-     ABOUT / WHY US
-========================= -->
 
-<section class="section about-section" id="about">
+<!-- =======================================================
+     END OF PART 1
+======================================================= -->
+  <!-- =======================================================
+     PRODUCT FEATURE
+======================================================= -->
 
-  <div class="about-visual">
+<section class="product-feature">
 
-    <div class="about-image-main">
+  <div class="container product-feature-grid">
+
+    <div class="product-feature-image">
 
       <img
-        src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1100&q=85"
-        alt="Electrical products and equipment"
+        src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&w=1400&q=90"
+        alt="Electrical lighting products"
       >
+
+      <div class="feature-floating-card">
+
+        <span>PRODUCT RANGE</span>
+
+        <strong>
+          Lighting that<br>
+          makes a space.
+        </strong>
+
+      </div>
 
     </div>
 
-    <div class="experience-card">
 
-      <strong>01</strong>
+    <div class="product-feature-copy">
 
-      <span>
-        Reliable<br>
-        Supply
+      <span class="section-label">
+        MORE THAN JUST PRODUCTS
       </span>
+
+      <h2 class="section-title">
+
+        The right electricals
+        <span>for the right job.</span>
+
+      </h2>
+
+      <p class="section-description">
+
+        Whether you're wiring a new home, setting up a shop,
+        working on a commercial project or simply replacing
+        an electrical component, Karmayogi Electricals can
+        help you find the right category and brand.
+
+      </p>
+
+
+      <div class="feature-points">
+
+        <div class="feature-point">
+
+          <div class="feature-point-icon">
+            01
+          </div>
+
+          <div>
+
+            <h3>
+              Home Electricals
+            </h3>
+
+            <p>
+              Everyday electrical products for residential
+              spaces and new installations.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="feature-point">
+
+          <div class="feature-point-icon">
+            02
+          </div>
+
+          <div>
+
+            <h3>
+              Commercial Supply
+            </h3>
+
+            <p>
+              Products for offices, shops, institutions
+              and commercial spaces.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="feature-point">
+
+          <div class="feature-point-icon">
+            03
+          </div>
+
+          <div>
+
+            <h3>
+              Project Requirements
+            </h3>
+
+            <p>
+              Discuss larger quantities and project-specific
+              electrical requirements with the store.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <a href="#contact" class="btn btn-primary">
+
+        Discuss Your Requirement
+
+        <span>→</span>
+
+      </a>
 
     </div>
 
   </div>
 
-
-  <div class="about-content">
-
-    <span class="section-kicker">
-      WHY KARMAYOGI
-    </span>
-
-    <h2>
-      Built around trust,
-      <span>quality & supply.</span>
-    </h2>
-
-    <p class="about-lead">
-      Karmayogi Electricals serves customers looking for genuine
-      electrical products, trusted brands and dependable supply
-      in the heart of Bhopal.
-    </p>
+</section>
 
 
-    <div class="benefit-list">
 
-      <div class="benefit">
+<!-- =======================================================
+     WHY KARMAYOGI
+======================================================= -->
 
-        <div class="benefit-number">
+<section class="section why-section">
+
+  <div class="container">
+
+
+    <div class="section-head">
+
+      <div>
+
+        <span class="section-label">
+          WHY KARMAYOGI
+        </span>
+
+        <h2 class="section-title">
+
+          A simpler way to
+          <span>source electricals.</span>
+
+        </h2>
+
+      </div>
+
+
+      <p class="section-description">
+
+        From choosing a product to arranging a larger supply,
+        the focus is simple — genuine products, recognised
+        brands and straightforward service.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="why-grid">
+
+
+      <div class="why-card why-card-large">
+
+        <div class="why-card-number">
           01
         </div>
 
-        <div>
-          <h3>Genuine Products</h3>
-          <p>
-            Source electrical products from established and
-            recognised brands.
-          </p>
+        <div class="why-card-icon">
+          ✓
         </div>
+
+        <h3>
+          Trusted Products
+        </h3>
+
+        <p>
+          A range covering everyday electrical essentials
+          and professional requirements, with products
+          from established brands.
+        </p>
 
       </div>
 
 
-      <div class="benefit">
 
-        <div class="benefit-number">
+      <div class="why-card">
+
+        <div class="why-card-number">
           02
         </div>
 
-        <div>
-          <h3>Wholesale Support</h3>
-          <p>
-            Suitable for contractors, builders, businesses
-            and larger requirements.
-          </p>
+        <div class="why-card-icon">
+          ◇
         </div>
+
+        <h3>
+          Multiple Categories
+        </h3>
+
+        <p>
+          Wires, switches, lighting, fans, switchgear
+          and electrical accessories.
+        </p>
 
       </div>
 
 
-      <div class="benefit">
 
-        <div class="benefit-number">
+      <div class="why-card">
+
+        <div class="why-card-number">
           03
         </div>
 
-        <div>
-          <h3>Wide Product Range</h3>
-          <p>
-            Wires, switches, lighting, fans, protection devices
-            and more.
-          </p>
+        <div class="why-card-icon">
+          ↗
         </div>
+
+        <h3>
+          Bulk Supply
+        </h3>
+
+        <p>
+          Suitable for contractors, businesses and
+          project-based requirements.
+        </p>
 
       </div>
 
 
-      <div class="benefit">
 
-        <div class="benefit-number">
+      <div class="why-card">
+
+        <div class="why-card-number">
           04
         </div>
 
-        <div>
-          <h3>Local & Accessible</h3>
-          <p>
-            Conveniently located at Ghora Nakkas, Bhopal.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     PRODUCT SHOWCASE
-========================= -->
-
-<section class="section product-section">
-
-  <div class="section-heading">
-
-    <div>
-
-      <span class="section-kicker">
-        FEATURED CATEGORIES
-      </span>
-
-      <h2>
-        Products for every
-        <span>electrical need.</span>
-      </h2>
-
-    </div>
-
-    <a href="#contact" class="text-link">
-      Ask for availability →
-    </a>
-
-  </div>
-
-
-  <div class="product-showcase">
-
-
-    <article class="product-card product-large">
-
-      <div class="product-image">
-
-        <img
-          src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&w=1200&q=85"
-          alt="LED lighting products"
-        >
-
-      </div>
-
-      <div class="product-content">
-
-        <span>01 / LIGHTING</span>
-
-        <h3>LED Lighting</h3>
-
-        <p>
-          Lighting solutions for homes, offices, shops and
-          commercial spaces.
-        </p>
-
-        <a href="#contact">
-          Enquire Now →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <article class="product-card">
-
-      <div class="product-image">
-
-        <img
-          src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=900&q=85"
-          alt="Electrical wires"
-        >
-
-      </div>
-
-      <div class="product-content">
-
-        <span>02 / CABLES</span>
-
-        <h3>House Wires</h3>
-
-        <p>
-          Wiring products for residential and commercial
-          installations.
-        </p>
-
-        <a href="#contact">
-          Enquire Now →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <article class="product-card">
-
-      <div class="product-image">
-
-        <img
-          src="https://images.unsplash.com/photo-1620283085437-7d7d5e0e6f4b?auto=format&fit=crop&w=900&q=85"
-          alt="Electrical switches"
-        >
-
-      </div>
-
-      <div class="product-content">
-
-        <span>03 / SWITCHGEAR</span>
-
-        <h3>Switches & MCBs</h3>
-
-        <p>
-          Switchgear and protection products for safer
-          electrical installations.
-        </p>
-
-        <a href="#contact">
-          Enquire Now →
-        </a>
-
-      </div>
-
-    </article>
-
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     BRANDS
-========================= -->
-
-<section class="brands-section" id="brands">
-
-  <div class="brands-inner">
-
-    <div class="brands-copy">
-
-      <span class="section-kicker">
-        OUR BRANDS
-      </span>
-
-      <h2>
-        Names you already
-        <span>know & trust.</span>
-      </h2>
-
-      <p>
-        We work with a range of established electrical brands
-        across wiring, lighting, switches, fans and protection.
-      </p>
-
-    </div>
-
-
-    <div class="brand-wall">
-
-      <div>HAVELLS</div>
-      <div>POLYCAB</div>
-      <div>FINOLEX</div>
-      <div>ANCHOR</div>
-      <div>SCHNEIDER</div>
-      <div>LEGRAND</div>
-      <div>PHILIPS</div>
-      <div>SYSKA</div>
-      <div>CROMPTON</div>
-      <div>ORIENT</div>
-      <div>USHA</div>
-      <div>BAJAJ</div>
-      <div>L&T</div>
-      <div>HAGER</div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     WHOLESALE CTA
-========================= -->
-
-<section class="wholesale-section">
-
-  <div class="wholesale-image">
-
-    <img
-      src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1400&q=85"
-      alt="Electrical project work"
-    >
-
-    <div class="wholesale-overlay"></div>
-
-  </div>
-
-
-  <div class="wholesale-content">
-
-    <span class="section-kicker">
-      FOR CONTRACTORS & PROJECTS
-    </span>
-
-    <h2>
-      Planning a bigger
-      <span>electrical requirement?</span>
-    </h2>
-
-    <p>
-      Tell us what you need. From wiring and switchgear to
-      lighting and fans, speak with our team about bulk and
-      project requirements.
-    </p>
-
-    <a href="#contact" class="btn btn-light">
-      Get a Bulk Quote
-      <span>→</span>
-    </a>
-
-  </div>
-
-          </section>
-          <!-- =========================
-     CUSTOMER TRUST
-========================= -->
-
-<section class="section trust-section">
-
-  <div class="section-heading centered">
-
-    <div>
-      <span class="section-kicker">
-        CUSTOMER TRUST
-      </span>
-
-      <h2>
-        A local store built on
-        <span>reliable service.</span>
-      </h2>
-    </div>
-
-    <p>
-      Visit us at Ghora Nakkas or contact the store directly
-      for product availability and requirements.
-    </p>
-
-  </div>
-
-
-  <div class="trust-cards">
-
-    <div class="trust-card">
-
-      <div class="trust-rating">
-        5.0
-        <span>★</span>
-      </div>
-
-      <h3>Public Rating</h3>
-
-      <p>
-        Rated 5.0 on the public business listing.
-      </p>
-
-    </div>
-
-
-    <div class="trust-card">
-
-      <div class="trust-card-icon">
-        ✓
-      </div>
-
-      <h3>Genuine Brands</h3>
-
-      <p>
-        Electrical products from recognised brands across
-        multiple categories.
-      </p>
-
-    </div>
-
-
-    <div class="trust-card">
-
-      <div class="trust-card-icon">
-        ↗
-      </div>
-
-      <h3>Bulk Requirements</h3>
-
-      <p>
-        Support for contractors, businesses and project
-        requirements.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     VISUAL GALLERY
-========================= -->
-
-<section class="gallery-section">
-
-  <div class="gallery-heading">
-
-    <div>
-
-      <span class="section-kicker">
-        ELECTRICAL ESSENTIALS
-      </span>
-
-      <h2>
-        Quality starts with
-        <span>the right products.</span>
-      </h2>
-
-    </div>
-
-    <p>
-      Explore the world of electrical products, lighting and
-      installation solutions.
-    </p>
-
-  </div>
-
-
-  <div class="gallery-grid">
-
-    <div class="gallery-item gallery-tall">
-
-      <img
-        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
-        alt="Modern commercial interior"
-      >
-
-      <div class="gallery-caption">
-        <span>01</span>
-        <strong>Modern Spaces</strong>
-      </div>
-
-    </div>
-
-
-    <div class="gallery-item">
-
-      <img
-        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=85"
-        alt="Electrical cable products"
-      >
-
-      <div class="gallery-caption">
-        <span>02</span>
-        <strong>Wiring Solutions</strong>
-      </div>
-
-    </div>
-
-
-    <div class="gallery-item">
-
-      <img
-        src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=1000&q=85"
-        alt="Lighting products"
-      >
-
-      <div class="gallery-caption">
-        <span>03</span>
-        <strong>Lighting</strong>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section class="section contact-section" id="contact">
-
-  <div class="contact-intro">
-
-    <span class="section-kicker">
-      GET IN TOUCH
-    </span>
-
-    <h2>
-      Let's talk about
-      <span>your requirement.</span>
-    </h2>
-
-    <p>
-      Looking for a specific electrical product, planning a
-      project or need a bulk quotation? Send us your requirement.
-    </p>
-
-
-    <div class="contact-details">
-
-      <a href="tel:+918839215043" class="contact-detail">
-
-        <div class="detail-icon">
-          ☎
-        </div>
-
-        <div>
-          <span>CALL US</span>
-          <strong>+91 88392 15043</strong>
-        </div>
-
-      </a>
-
-
-      <a href="tel:+918147772375" class="contact-detail">
-
-        <div class="detail-icon">
-          ☎
-        </div>
-
-        <div>
-          <span>ALTERNATE NUMBER</span>
-          <strong>+91 81477 72375</strong>
-        </div>
-
-      </a>
-
-
-      <div class="contact-detail">
-
-        <div class="detail-icon">
+        <div class="why-card-icon">
           ⌖
         </div>
 
-        <div>
-          <span>VISIT US</span>
-          <strong>Ghora Nakkas, Bhopal</strong>
-        </div>
+        <h3>
+          Convenient Location
+        </h3>
+
+        <p>
+          Located at Ghora Nakkas on Mangalwara Road
+          in Bhopal.
+        </p>
 
       </div>
+
+
+
+      <div class="why-card why-card-wide">
+
+        <div class="why-wide-content">
+
+          <span class="mini-label">
+            OPEN EVERY DAY
+          </span>
+
+          <h3>
+            09:00 AM — 08:00 PM
+          </h3>
+
+          <p>
+            Visit the store or call ahead to discuss
+            availability for your requirement.
+          </p>
+
+        </div>
+
+
+        <a href="#contact" class="circle-arrow">
+          →
+        </a>
+
+      </div>
+
 
     </div>
-
-  </div>
-
-
-  <div class="contact-card">
-
-    <div class="contact-card-top">
-
-      <span>
-        QUICK ENQUIRY
-      </span>
-
-      <div class="contact-status">
-        <i></i>
-        Open today
-      </div>
-
-    </div>
-
-
-    <form id="enquiryForm">
-
-      <div class="form-row">
-
-        <div class="form-group">
-
-          <label for="customerName">
-            Your Name
-          </label>
-
-          <input
-            type="text"
-            id="customerName"
-            placeholder="Enter your name"
-            required
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="customerPhone">
-            Phone Number
-          </label>
-
-          <input
-            type="tel"
-            id="customerPhone"
-            placeholder="Enter phone number"
-            required
-          >
-
-        </div>
-
-      </div>
-
-
-      <div class="form-group">
-
-        <label for="requirement">
-          Requirement
-        </label>
-
-        <select id="requirement" required>
-
-          <option value="">
-            Select a category
-          </option>
-
-          <option>
-            Wires & Cables
-          </option>
-
-          <option>
-            Modular Switches
-          </option>
-
-          <option>
-            Lighting & LED
-          </option>
-
-          <option>
-            Fans
-          </option>
-
-          <option>
-            MCB / RCCB / Switchgear
-          </option>
-
-          <option>
-            Bulk / Project Supply
-          </option>
-
-          <option>
-            Other
-          </option>
-
-        </select>
-
-      </div>
-
-
-      <div class="form-group">
-
-        <label for="message">
-          What do you need?
-        </label>
-
-        <textarea
-          id="message"
-          rows="5"
-          placeholder="Tell us what you're looking for..."
-          required
-        ></textarea>
-
-      </div>
-
-
-      <button type="submit" class="form-submit">
-
-        Send Enquiry
-
-        <span>→</span>
-
-      </button>
-
-      <p class="form-note">
-        We'll use your details only to respond to your enquiry.
-      </p>
-
-    </form>
 
   </div>
 
 </section>
 
 
-<!-- =========================
-     LOCATION
-========================= -->
 
-<section class="location-section">
+<!-- =======================================================
+     ABOUT
+======================================================= -->
 
-  <div class="location-map">
+<section class="section about-section" id="about">
 
-    <div class="map-pattern"></div>
+  <div class="container about-grid">
 
-    <div class="map-pin">
 
-      <div class="pin-dot"></div>
+    <div class="about-copy">
 
-      <span>Karmayogi Electricals</span>
+      <span class="section-label">
+        ABOUT KARMAYOGI
+      </span>
+
+      <h2 class="section-title">
+
+        Electrical supply
+        <span>made straightforward.</span>
+
+      </h2>
+
+      <p class="about-text">
+
+        Karmayogi Electricals is an electrical goods store
+        located in Ghora Nakkas, Bhopal, serving customers
+        looking for electrical products across residential,
+        commercial and project requirements.
+
+      </p>
+
+      <p class="about-text">
+
+        The range includes wires and cables, modular switches,
+        lighting, fans, switchgear and other electrical
+        essentials from recognised brands.
+
+      </p>
+
+
+      <div class="about-stats">
+
+        <div>
+
+          <strong>01</strong>
+
+          <span>
+            Local<br>
+            Store
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <strong>02</strong>
+
+          <span>
+            Retail &<br>
+            Bulk
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <strong>03</strong>
+
+          <span>
+            Multiple<br>
+            Categories
+          </span>
+
+        </div>
+
+      </div>
 
     </div>
 
-    <div class="map-road road-one"></div>
-    <div class="map-road road-two"></div>
-    <div class="map-road road-three"></div>
+
+
+    <div class="about-visual">
+
+      <div class="about-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=90"
+          alt="Electrical installation"
+        >
+
+      </div>
+
+
+      <div class="about-location-card">
+
+        <span>
+          FIND US
+        </span>
+
+        <strong>
+          Ghora Nakkas
+        </strong>
+
+        <p>
+          Bhopal, Madhya Pradesh
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     WHOLESALE / PROJECT
+======================================================= -->
+
+<section class="project-section">
+
+  <div class="project-background">
+
+    <img
+      src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1800&q=90"
+      alt="Electrical engineering project"
+    >
 
   </div>
 
 
-  <div class="location-content">
+  <div class="project-overlay"></div>
 
-    <span class="section-kicker">
-      FIND US
-    </span>
+
+  <div class="container project-content">
+
+    <div class="project-label">
+      FOR CONTRACTORS • BUILDERS • BUSINESSES
+    </div>
+
 
     <h2>
-      Come visit us at
-      <span>Ghora Nakkas.</span>
+      One project.
+      <span>One electrical partner.</span>
     </h2>
 
+
     <p>
-      Shop No. 4, House 60, Mangalwara Road,
-      Hanuman Ganj, Ghora Nakkas Choraha,
-      Bhopal, Madhya Pradesh – 462001
+
+      Working on a home, commercial property, shop,
+      office or larger project? Share your requirement
+      and ask about bulk electrical supply.
+
     </p>
 
 
-    <div class="opening-hours">
+    <div class="project-actions">
 
-      <div class="hours-heading">
-        <span>STORE HOURS</span>
-        <strong>Every day</strong>
-      </div>
+      <a href="#contact" class="btn btn-primary">
 
-      <div class="hours-time">
-        09:00 AM — 08:00 PM
-      </div>
+        Request Bulk Quote
 
-    </div>
-
-
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=Karmayogi+Electricals+Ghora+Nakkas+Bhopal"
-      target="_blank"
-      rel="noopener"
-      class="map-button"
-    >
-      Open in Google Maps
-      <span>↗</span>
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     FINAL CTA
-========================= -->
-
-<section class="final-cta">
-
-  <div class="final-cta-inner">
-
-    <div>
-
-      <span class="section-kicker">
-        KARMAYOGI ELECTRICALS
-      </span>
-
-      <h2>
-        Need electrical products?
-        <span>Let's get it sorted.</span>
-      </h2>
-
-    </div>
-
-
-    <div class="final-actions">
-
-      <a
-        href="tel:+918839215043"
-        class="btn btn-light"
-      >
-        Call the Store
-        <span>☎</span>
-      </a>
-
-      <a
-        href="#contact"
-        class="btn btn-outline-light"
-      >
-        Send Enquiry
         <span>→</span>
+
+      </a>
+
+
+      <a href="tel:+918839215043" class="project-phone">
+
+        <span>Call directly</span>
+
+        <strong>
+          +91 88392 15043
+        </strong>
+
       </a>
 
     </div>
@@ -2819,201 +2322,1589 @@ nav{
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
 
-<footer class="footer">
+<!-- =======================================================
+     BRANDS
+======================================================= -->
 
-  <div class="footer-main">
+<section class="section brands-section" id="brands">
 
-    <div class="footer-brand">
+  <div class="container">
 
-      <a href="#" class="footer-logo">
 
-        <span class="logo-mark">
-          K
+    <div class="brands-top">
+
+      <div>
+
+        <span class="section-label">
+          BRANDS
         </span>
 
-        <span>
-          Karmayogi
-          <small>Electricals</small>
-        </span>
+        <h2 class="section-title">
 
-      </a>
+          Recognised names,
+          <span>under one roof.</span>
 
-      <p>
-        Genuine electrical products, trusted brands and
-        dependable supply in Bhopal.
+        </h2>
+
+      </div>
+
+
+      <p class="section-description">
+
+        Brand availability can vary by product and current
+        stock. Contact the store for the latest availability.
+
       </p>
 
     </div>
 
 
-    <div class="footer-column">
 
-      <h4>Explore</h4>
-
-      <a href="#about">About</a>
-      <a href="#products">Products</a>
-      <a href="#brands">Brands</a>
-      <a href="#contact">Contact</a>
-
-    </div>
+    <div class="brands-showcase">
 
 
-    <div class="footer-column">
+      <div class="brand-tile">
 
-      <h4>Products</h4>
+        <span>01</span>
 
-      <a href="#products">Wires & Cables</a>
-      <a href="#products">Switches</a>
-      <a href="#products">Lighting</a>
-      <a href="#products">Fans</a>
+        <strong>
+          HAVELLS
+        </strong>
 
-    </div>
+        <small>
+          Electricals
+        </small>
+
+      </div>
 
 
-    <div class="footer-column footer-contact">
+      <div class="brand-tile">
 
-      <h4>Contact</h4>
+        <span>02</span>
 
-      <a href="tel:+918839215043">
-        +91 88392 15043
-      </a>
+        <strong>
+          POLYCAB
+        </strong>
 
-      <a href="tel:+918147772375">
-        +91 81477 72375
-      </a>
+        <small>
+          Wires & Cables
+        </small>
 
-      <span>
-        Bhopal, Madhya Pradesh
-      </span>
+      </div>
+
+
+      <div class="brand-tile">
+
+        <span>03</span>
+
+        <strong>
+          FINOLEX
+        </strong>
+
+        <small>
+          Cables
+        </small>
+
+      </div>
+
+
+      <div class="brand-tile">
+
+        <span>04</span>
+
+        <strong>
+          ANCHOR
+        </strong>
+
+        <small>
+          Switches
+        </small>
+
+      </div>
+
+
+      <div class="brand-tile">
+
+        <span>05</span>
+
+        <strong>
+          SCHNEIDER
+        </strong>
+
+        <small>
+          Electrical
+        </small>
+
+      </div>
+
+
+      <div class="brand-tile">
+
+        <span>06</span>
+
+        <strong>
+          LEGRAND
+        </strong>
+
+        <small>
+          Electrical
+        </small>
+
+      </div>
+
+
+      <div class="brand-tile">
+
+        <span>07</span>
+
+        <strong>
+          PHILIPS
+        </strong>
+
+        <small>
+          Lighting
+        </small>
+
+      </div>
+
+
+      <div class="brand-tile">
+
+        <span>08</span>
+
+        <strong>
+          SYSKA
+        </strong>
+
+        <small>
+          Lighting
+        </small>
+
+      </div>
+
+
+      <div class="brand-tile">
+
+        <span>09</span>
+
+        <strong>
+          CROMPTON
+        </strong>
+
+        <small>
+          Fans & Lighting
+        </small>
+
+      </div>
+
+
+      <div class="brand-tile">
+
+        <span>10</span>
+
+        <strong>
+          ORIENT
+        </strong>
+
+        <small>
+          Fans
+        </small>
+
+      </div>
+
+
+      <div class="brand-tile">
+
+        <span>11</span>
+
+        <strong>
+          USHA
+        </strong>
+
+        <small>
+          Fans
+        </small>
+
+      </div>
+
+
+      <div class="brand-tile">
+
+        <span>12</span>
+
+        <strong>
+          BAJAJ
+        </strong>
+
+        <small>
+          Electricals
+        </small>
+
+      </div>
+
+
+      <div class="brand-tile">
+
+        <span>13</span>
+
+        <strong>
+          L&T
+        </strong>
+
+        <small>
+          Switchgear
+        </small>
+
+      </div>
+
+
+      <div class="brand-tile">
+
+        <span>14</span>
+
+        <strong>
+          HAGER
+        </strong>
+
+        <small>
+          Protection
+        </small>
+
+      </div>
+
 
     </div>
 
   </div>
 
+</section>
 
-  <div class="footer-bottom">
 
-    <span>
-      © 2026 Karmayogi Electricals. All rights reserved.
-    </span>
 
-    <span>
-      Ghora Nakkas • Bhopal
-    </span>
+<!-- =======================================================
+     BRAND STATEMENT
+======================================================= -->
+
+<section class="brand-statement">
+
+  <div class="container">
+
+    <div class="brand-statement-inner">
+
+      <span class="section-label">
+        ALL BRANDS UNDER ONE ROOF
+      </span>
+
+      <h2>
+        Genuine electricals.
+        <span>Wholesale prices.</span>
+      </h2>
+
+      <p>
+        Talk to the store about your exact requirement,
+        quantity and preferred brand.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- =======================================================
+     PART 3 — CONTACT / FOOTER / JAVASCRIPT
+======================================================= -->
+
+<style>
+
+/* =======================================================
+   CONTACT SECTION
+======================================================= */
+
+.contact-section{
+  padding:120px 0;
+  background:#f5f3ee;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:70px;
+  align-items:start;
+}
+
+.contact-intro{
+  position:sticky;
+  top:120px;
+}
+
+.contact-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  font-size:11px;
+  letter-spacing:2px;
+  font-weight:800;
+  color:#b47b20;
+  margin-bottom:20px;
+}
+
+.contact-kicker::before{
+  content:"";
+  width:28px;
+  height:1px;
+  background:#b47b20;
+}
+
+.contact-intro h2{
+  font-family:"Playfair Display",serif;
+  font-size:clamp(42px,5vw,68px);
+  line-height:1.02;
+  font-weight:500;
+  color:#151515;
+  margin-bottom:24px;
+}
+
+.contact-intro h2 span{
+  color:#a66c17;
+  font-style:italic;
+}
+
+.contact-intro p{
+  max-width:470px;
+  color:#6e6b65;
+  line-height:1.8;
+  font-size:15px;
+  margin-bottom:35px;
+}
+
+.contact-details{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.contact-detail{
+  display:flex;
+  align-items:flex-start;
+  gap:15px;
+}
+
+.contact-detail-icon{
+  width:43px;
+  height:43px;
+  border-radius:50%;
+  background:#fff;
+  border:1px solid #e7e1d6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#a66c17;
+  flex-shrink:0;
+}
+
+.contact-detail strong{
+  display:block;
+  font-size:13px;
+  color:#1b1b1b;
+  margin-bottom:4px;
+}
+
+.contact-detail span,
+.contact-detail a{
+  color:#77736c;
+  text-decoration:none;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.contact-detail a:hover{
+  color:#a66c17;
+}
+
+
+/* =======================================================
+   FORM
+======================================================= */
+
+.enquiry-card{
+  background:#fff;
+  border:1px solid #e7e2d9;
+  border-radius:28px;
+  padding:42px;
+  box-shadow:0 20px 60px rgba(30,25,15,.06);
+}
+
+.enquiry-card-top{
+  margin-bottom:30px;
+}
+
+.enquiry-card-top h3{
+  font-family:"Playfair Display",serif;
+  font-size:31px;
+  font-weight:500;
+  color:#181818;
+  margin-bottom:8px;
+}
+
+.enquiry-card-top p{
+  font-size:13px;
+  color:#85817a;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.form-group{
+  margin-bottom:18px;
+}
+
+.form-group.full{
+  grid-column:1 / -1;
+}
+
+.form-group label{
+  display:block;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:#55514a;
+  margin-bottom:8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  border:1px solid #e3ded4;
+  background:#faf9f6;
+  border-radius:11px;
+  padding:14px 15px;
+  font-family:inherit;
+  font-size:14px;
+  color:#222;
+  outline:none;
+  transition:.25s ease;
+}
+
+.form-group textarea{
+  min-height:125px;
+  resize:vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color:#b47b20;
+  background:#fff;
+  box-shadow:0 0 0 3px rgba(180,123,32,.08);
+}
+
+.form-submit{
+  margin-top:5px;
+  width:100%;
+  border:0;
+  cursor:pointer;
+  font-family:inherit;
+}
+
+.form-note{
+  text-align:center;
+  margin-top:13px;
+  font-size:11px;
+  color:#96928a;
+}
+
+.form-success{
+  display:none;
+  text-align:center;
+  padding:35px 15px;
+}
+
+.form-success.active{
+  display:block;
+}
+
+.form-success-icon{
+  width:55px;
+  height:55px;
+  margin:0 auto 18px;
+  border-radius:50%;
+  background:#f3eadb;
+  color:#a66c17;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+}
+
+.form-success h3{
+  font-family:"Playfair Display",serif;
+  font-size:28px;
+  font-weight:500;
+  margin-bottom:8px;
+}
+
+.form-success p{
+  font-size:13px;
+  color:#777;
+  line-height:1.7;
+}
+
+
+/* =======================================================
+   LOCATION STRIP
+======================================================= */
+
+.location-section{
+  padding:0 0 110px;
+  background:#f5f3ee;
+}
+
+.location-card{
+  background:#171717;
+  color:#fff;
+  border-radius:28px;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  min-height:390px;
+}
+
+.location-info{
+  padding:55px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.location-info .small-title{
+  font-size:10px;
+  letter-spacing:2px;
+  font-weight:800;
+  color:#d0a25b;
+  margin-bottom:17px;
+}
+
+.location-info h3{
+  font-family:"Playfair Display",serif;
+  font-size:42px;
+  line-height:1.08;
+  font-weight:500;
+  margin-bottom:20px;
+}
+
+.location-info p{
+  color:#aaa7a1;
+  font-size:14px;
+  line-height:1.8;
+  max-width:430px;
+  margin-bottom:28px;
+}
+
+.location-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.location-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:13px 19px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:800;
+  transition:.25s ease;
+}
+
+.location-btn.primary{
+  background:#c38a2d;
+  color:#fff;
+}
+
+.location-btn.primary:hover{
+  background:#d29a3c;
+  transform:translateY(-2px);
+}
+
+.location-btn.secondary{
+  color:#fff;
+  border:1px solid #484848;
+}
+
+.location-btn.secondary:hover{
+  border-color:#8d8d8d;
+}
+
+.location-visual{
+  min-height:390px;
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(135deg,#282828,#101010);
+}
+
+.location-visual::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.05) 1px,
+      transparent 1px
+    );
+  background-size:35px 35px;
+}
+
+.map-placeholder{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  text-align:center;
+  padding:30px;
+}
+
+.map-pin{
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  background:#c38a2d;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:27px;
+  margin-bottom:18px;
+  box-shadow:0 0 0 12px rgba(195,138,45,.12);
+}
+
+.map-placeholder strong{
+  font-size:16px;
+  margin-bottom:7px;
+}
+
+.map-placeholder span{
+  max-width:270px;
+  font-size:12px;
+  line-height:1.6;
+  color:#aaa;
+}
+
+
+/* =======================================================
+   FOOTER
+======================================================= */
+
+.footer{
+  background:#111;
+  color:#fff;
+  padding:75px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr .7fr .7fr 1fr;
+  gap:50px;
+  padding-bottom:60px;
+  border-bottom:1px solid #2b2b2b;
+}
+
+.footer-brand{
+  max-width:330px;
+}
+
+.footer-logo{
+  font-family:"Playfair Display",serif;
+  font-size:29px;
+  letter-spacing:-.5px;
+  margin-bottom:17px;
+}
+
+.footer-brand p{
+  color:#888;
+  font-size:13px;
+  line-height:1.8;
+  max-width:290px;
+}
+
+.footer-heading{
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2px;
+  color:#d0a25b;
+  margin-bottom:20px;
+}
+
+.footer-links{
+  display:flex;
+  flex-direction:column;
+  gap:11px;
+}
+
+.footer-links a{
+  color:#898989;
+  text-decoration:none;
+  font-size:13px;
+  transition:.2s ease;
+}
+
+.footer-links a:hover{
+  color:#fff;
+  transform:translateX(3px);
+}
+
+.footer-contact p{
+  color:#888;
+  font-size:13px;
+  line-height:1.7;
+  margin-bottom:10px;
+}
+
+.footer-contact a{
+  color:#aaa;
+  text-decoration:none;
+}
+
+.footer-contact a:hover{
+  color:#d0a25b;
+}
+
+.footer-bottom{
+  padding-top:22px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+}
+
+.footer-bottom p{
+  color:#686868;
+  font-size:11px;
+}
+
+.footer-tag{
+  color:#686868;
+  font-size:10px;
+  letter-spacing:1px;
+}
+
+
+/* =======================================================
+   FLOATING MOBILE ACTIONS
+======================================================= */
+
+.mobile-actions{
+  display:none;
+}
+
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media(max-width:900px){
+
+  .contact-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .contact-intro{
+    position:static;
+  }
+
+  .location-card{
+    grid-template-columns:1fr;
+  }
+
+  .location-visual{
+    min-height:280px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:650px){
+
+  .contact-section{
+    padding:80px 0;
+  }
+
+  .contact-intro h2{
+    font-size:44px;
+  }
+
+  .enquiry-card{
+    padding:25px 19px;
+    border-radius:20px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .form-group.full{
+    grid-column:auto;
+  }
+
+  .location-section{
+    padding-bottom:80px;
+  }
+
+  .location-card{
+    border-radius:20px;
+  }
+
+  .location-info{
+    padding:35px 25px;
+  }
+
+  .location-info h3{
+    font-size:34px;
+  }
+
+  .location-visual{
+    min-height:250px;
+  }
+
+  .footer{
+    padding:60px 0 90px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    gap:38px 25px;
+    padding-bottom:40px;
+  }
+
+  .footer-brand{
+    grid-column:1 / -1;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .mobile-actions{
+    position:fixed;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    bottom:12px;
+    left:12px;
+    right:12px;
+    z-index:9999;
+  }
+
+  .mobile-action{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    min-height:48px;
+    border-radius:12px;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:800;
+    box-shadow:0 8px 25px rgba(0,0,0,.18);
+  }
+
+  .mobile-action.call{
+    background:#fff;
+    color:#181818;
+  }
+
+  .mobile-action.whatsapp{
+    background:#181818;
+    color:#fff;
+  }
+
+}
+
+</style>
+
+
+<!-- =======================================================
+     CONTACT / ENQUIRY
+======================================================= -->
+
+<section class="contact-section" id="contact">
+
+  <div class="container">
+
+    <div class="contact-grid">
+
+      <!-- LEFT -->
+
+      <div class="contact-intro">
+
+        <div class="contact-kicker">
+          GET IN TOUCH
+        </div>
+
+        <h2>
+          Let's get your
+          <span>requirements</span>
+          sorted.
+        </h2>
+
+        <p>
+          Looking for a particular wire, switch, light, fan,
+          protection device or a complete electrical supply?
+          Tell us what you need and our team can help you
+          with availability and requirements.
+        </p>
+
+
+        <div class="contact-details">
+
+          <div class="contact-detail">
+
+            <div class="contact-detail-icon">
+              ☎
+            </div>
+
+            <div>
+              <strong>Call us</strong>
+
+              <a href="tel:+918839215043">
+                +91 88392 15043
+              </a>
+
+              <br>
+
+              <a href="tel:+918147772375">
+                +91 81477 72375
+              </a>
+            </div>
+
+          </div>
+
+
+          <div class="contact-detail">
+
+            <div class="contact-detail-icon">
+              ◷
+            </div>
+
+            <div>
+              <strong>Business hours</strong>
+
+              <span>
+                Monday – Sunday · 09:00 AM – 08:00 PM
+              </span>
+            </div>
+
+          </div>
+
+
+          <div class="contact-detail">
+
+            <div class="contact-detail-icon">
+              ⌖
+            </div>
+
+            <div>
+              <strong>Visit us</strong>
+
+              <span>
+                Mangalwara Road, Hanuman Ganj,<br>
+                Ghora Nakkas Choraha, Bhopal
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT FORM -->
+
+      <div class="enquiry-card">
+
+        <div id="enquiryFormWrapper">
+
+          <div class="enquiry-card-top">
+
+            <h3>
+              Product enquiry
+            </h3>
+
+            <p>
+              Share your requirement and we'll get back to you.
+            </p>
+
+          </div>
+
+
+          <form id="enquiryForm">
+
+            <div class="form-grid">
+
+
+              <div class="form-group">
+
+                <label for="customerName">
+                  Your Name
+                </label>
+
+                <input
+                  type="text"
+                  id="customerName"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="customerPhone">
+                  Phone Number
+                </label>
+
+                <input
+                  type="tel"
+                  id="customerPhone"
+                  name="phone"
+                  placeholder="+91"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="productCategory">
+                  Category
+                </label>
+
+                <select
+                  id="productCategory"
+                  name="category"
+                  required
+                >
+
+                  <option value="">
+                    Select category
+                  </option>
+
+                  <option>
+                    Wires & Cables
+                  </option>
+
+                  <option>
+                    Switches & Sockets
+                  </option>
+
+                  <option>
+                    Lighting & LED
+                  </option>
+
+                  <option>
+                    Fans
+                  </option>
+
+                  <option>
+                    MCB & Switchgear
+                  </option>
+
+                  <option>
+                    Bulk / Project Supply
+                  </option>
+
+                  <option>
+                    Other
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="quantity">
+                  Quantity
+                </label>
+
+                <input
+                  type="text"
+                  id="quantity"
+                  name="quantity"
+                  placeholder="e.g. 20 pcs / 5 boxes"
+                >
+
+              </div>
+
+
+              <div class="form-group full">
+
+                <label for="message">
+                  Requirement
+                </label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us the product, brand or requirement you're looking for..."
+                ></textarea>
+
+              </div>
+
+
+              <div class="form-group full">
+
+                <button
+                  type="submit"
+                  class="btn btn-primary form-submit"
+                >
+
+                  Send Enquiry
+
+                  <span>→</span>
+
+                </button>
+
+              </div>
+
+            </div>
+
+          </form>
+
+
+          <div class="form-note">
+            Your enquiry will open WhatsApp with the details filled in.
+          </div>
+
+        </div>
+
+
+        <!-- SUCCESS STATE -->
+
+        <div class="form-success" id="formSuccess">
+
+          <div class="form-success-icon">
+            ✓
+          </div>
+
+          <h3>
+            Enquiry ready.
+          </h3>
+
+          <p>
+            WhatsApp is opening with your requirement.
+            You can review the message before sending it.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     LOCATION
+======================================================= -->
+
+<section class="location-section">
+
+  <div class="container">
+
+    <div class="location-card">
+
+      <div class="location-info">
+
+        <div class="small-title">
+          FIND US IN BHOPAL
+        </div>
+
+        <h3>
+          Right in the heart of Ghora Nakkas.
+        </h3>
+
+        <p>
+          Shop No. 4, House 60, Mangalwara Road,
+          Hanuman Ganj, Ghora Nakkas Choraha,
+          Bhopal, Madhya Pradesh – 462001.
+        </p>
+
+        <div class="location-actions">
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Karmayogi+Electricals+Bhopal"
+            target="_blank"
+            rel="noopener"
+            class="location-btn primary"
+          >
+            Open in Maps →
+          </a>
+
+          <a
+            href="tel:+918839215043"
+            class="location-btn secondary"
+          >
+            Call Store
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="location-visual">
+
+        <div class="map-placeholder">
+
+          <div class="map-pin">
+            ⌖
+          </div>
+
+          <strong>
+            Karmayogi Electricals
+          </strong>
+
+          <span>
+            Mangalwara Road · Hanuman Ganj ·
+            Ghora Nakkas Choraha · Bhopal
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<footer class="footer">
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+
+      <!-- BRAND -->
+
+      <div class="footer-brand">
+
+        <div class="footer-logo">
+          Karmayogi Electricals
+        </div>
+
+        <p>
+          Genuine electrical products, dependable brands
+          and wholesale-oriented supply for homes,
+          businesses, contractors and projects.
+        </p>
+
+      </div>
+
+
+      <!-- QUICK LINKS -->
+
+      <div>
+
+        <div class="footer-heading">
+          EXPLORE
+        </div>
+
+        <div class="footer-links">
+
+          <a href="#home">
+            Home
+          </a>
+
+          <a href="#categories">
+            Categories
+          </a>
+
+          <a href="#products">
+            Products
+          </a>
+
+          <a href="#brands">
+            Brands
+          </a>
+
+          <a href="#about">
+            About
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- CATEGORIES -->
+
+      <div>
+
+        <div class="footer-heading">
+          PRODUCTS
+        </div>
+
+        <div class="footer-links">
+
+          <a href="#products">
+            Wires & Cables
+          </a>
+
+          <a href="#products">
+            Switches
+          </a>
+
+          <a href="#products">
+            Lighting
+          </a>
+
+          <a href="#products">
+            Fans
+          </a>
+
+          <a href="#products">
+            Switchgear
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONTACT -->
+
+      <div class="footer-contact">
+
+        <div class="footer-heading">
+          CONTACT
+        </div>
+
+        <p>
+          Shop No. 4, House 60,<br>
+          Mangalwara Road,<br>
+          Hanuman Ganj,<br>
+          Ghora Nakkas Choraha,<br>
+          Bhopal – 462001
+        </p>
+
+        <p>
+          <a href="tel:+918839215043">
+            +91 88392 15043
+          </a>
+        </p>
+
+        <p>
+          <a href="tel:+918147772375">
+            +91 81477 72375
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 Karmayogi Electricals. All rights reserved.
+      </p>
+
+      <div class="footer-tag">
+        ELECTRICALS · WHOLESALE · PROJECT SUPPLY
+      </div>
+
+    </div>
 
   </div>
 
 </footer>
 
 
-<!-- =========================
-     FLOATING MOBILE ACTIONS
-========================= -->
 
-<div class="floating-actions">
+<!-- =======================================================
+     MOBILE ACTION BAR
+======================================================= -->
+
+<div class="mobile-actions">
 
   <a
     href="tel:+918839215043"
-    class="floating-call"
-    aria-label="Call Karmayogi Electricals"
+    class="mobile-action call"
   >
-    ☎
+    ☎ Call Store
   </a>
 
   <a
-    href="#contact"
-    class="floating-enquiry"
-    aria-label="Send enquiry"
+    href="https://wa.me/918839215043"
+    target="_blank"
+    rel="noopener"
+    class="mobile-action whatsapp"
   >
-    ✉
+    WhatsApp →
   </a>
 
 </div>
 
 
-</main>
 
-
-<!-- =========================
+<!-- =======================================================
      JAVASCRIPT
-========================= -->
+======================================================= -->
 
 <script>
 
-const menuBtn = document.getElementById("menuBtn");
-const nav = document.querySelector(".main-nav");
+/* =======================================================
+   PRODUCT FILTER
+======================================================= */
 
-if(menuBtn && nav){
+const productTabs = document.querySelectorAll(".product-tab");
+const productCards = document.
+  productTabs.forEach(tab => {
 
-  menuBtn.addEventListener("click", () => {
+  tab.addEventListener("click", () => {
 
-    nav.classList.toggle("active");
-    menuBtn.classList.toggle("active");
+    productTabs.forEach(item => {
+      item.classList.remove("active");
+    });
+
+    tab.classList.add("active");
+
+    const filter = tab.dataset.filter;
+
+    productCards.forEach(card => {
+
+      const category = card.dataset.category;
+
+      if(filter === "all" || category === filter){
+
+        card.style.display = "";
+
+        setTimeout(() => {
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0)";
+        }, 20);
+
+      } else {
+
+        card.style.opacity = "0";
+        card.style.transform = "translateY(12px)";
+
+        setTimeout(() => {
+          card.style.display = "none";
+        }, 180);
+
+      }
+
+    });
+
+  });
+
+});
+
+
+/* =======================================================
+   MOBILE NAVIGATION
+======================================================= */
+
+const menuButton = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-links");
+
+if(menuButton && nav){
+
+  menuButton.addEventListener("click", () => {
+
+    nav.classList.toggle("mobile-open");
+    menuButton.classList.toggle("active");
+
+  });
+
+
+  nav.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+      nav.classList.remove("mobile-open");
+      menuButton.classList.remove("active");
+
+    });
 
   });
 
 }
 
 
-document.querySelectorAll(".main-nav a").forEach(link => {
+/* =======================================================
+   NAVBAR SCROLL EFFECT
+======================================================= */
 
-  link.addEventListener("click", () => {
+const navbar = document.querySelector(".navbar");
 
-    nav.classList.remove("active");
-    menuBtn.classList.remove("active");
+window.addEventListener("scroll", () => {
 
-  });
+  if(!navbar) return;
 
-});
+  if(window.scrollY > 30){
 
+    navbar.classList.add("scrolled");
 
-/* Scroll reveal */
+  }else{
 
-const revealElements = document.querySelectorAll(
-  ".category-card, .benefit, .product-card, .trust-card, .gallery-item, .contact-card"
-);
+    navbar.classList.remove("scrolled");
 
-const revealObserver = new IntersectionObserver(
-
-  entries => {
-
-    entries.forEach(entry => {
-
-      if(entry.isIntersecting){
-
-        entry.target.classList.add("revealed");
-
-        revealObserver.unobserve(entry.target);
-
-      }
-
-    });
-
-  },
-
-  {
-    threshold: 0.12
   }
 
-);
-
-
-revealElements.forEach(element => {
-
-  element.classList.add("reveal");
-
-  revealObserver.observe(element);
-
 });
 
 
-/* Enquiry form */
+/* =======================================================
+   ENQUIRY FORM
+======================================================= */
 
-const enquiryForm = document.getElementById("enquiryForm");
+const enquiryForm =
+  document.getElementById("enquiryForm");
+
+const formWrapper =
+  document.getElementById("enquiryFormWrapper");
+
+const formSuccess =
+  document.getElementById("formSuccess");
+
 
 if(enquiryForm){
 
@@ -3021,68 +3912,119 @@ if(enquiryForm){
 
     event.preventDefault();
 
+
     const name =
       document.getElementById("customerName").value.trim();
 
     const phone =
       document.getElementById("customerPhone").value.trim();
 
-    const requirement =
-      document.getElementById("requirement").value;
+    const category =
+      document.getElementById("productCategory").value;
+
+    const quantity =
+      document.getElementById("quantity").value.trim();
 
     const message =
       document.getElementById("message").value.trim();
 
 
-    const text =
-      `Hello Karmayogi Electricals,
+    const whatsappMessage =
 
-` +
-      `My name is ${name}.
-` +
-      `Phone: ${phone}
-` +
-      `Requirement: ${requirement}
+`Hello Karmayogi Electricals,
 
-` +
-      `${message}`;
+I would like to enquire about an electrical product.
 
+Name: ${name}
+Phone: ${phone}
+Category: ${category}
+Quantity: ${quantity || "Not specified"}
 
-    const whatsappNumber = "918839215043";
+Requirement:
+${message || "Please contact me regarding availability and pricing."}`;
+
 
     const whatsappURL =
-      "https://wa.me/" +
-      whatsappNumber +
-      "?text=" +
-      encodeURIComponent(text);
+      "https://wa.me/918839215043?text=" +
+      encodeURIComponent(whatsappMessage);
 
 
-    window.open(
-      whatsappURL,
-      "_blank"
-    );
+    if(formWrapper){
+
+      formWrapper.style.display = "none";
+
+    }
+
+
+    if(formSuccess){
+
+      formSuccess.classList.add("active");
+
+    }
+
+
+    setTimeout(() => {
+
+      window.open(
+        whatsappURL,
+        "_blank"
+      );
+
+    },500);
 
   });
 
 }
 
 
-/* Smooth scrolling */
+/* =======================================================
+   SMOOTH SCROLL
+======================================================= */
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-  anchor.addEventListener("click", function(event){
+  link.addEventListener("click", function(event){
+
+    const targetId =
+      this.getAttribute("href");
+
+
+    if(
+      !targetId ||
+      targetId === "#"
+    ){
+
+      return;
+
+    }
+
 
     const target =
-      document.querySelector(this.getAttribute("href"));
+      document.querySelector(targetId);
+
 
     if(target){
 
       event.preventDefault();
 
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+
+      const navbarHeight =
+        navbar ? navbar.offsetHeight : 0;
+
+
+      const targetPosition =
+        target.getBoundingClientRect().top +
+        window.scrollY -
+        navbarHeight -
+        15;
+
+
+      window.scrollTo({
+
+        top:targetPosition,
+
+        behavior:"smooth"
+
       });
 
     }
@@ -3091,8 +4033,237 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 });
 
+
+/* =======================================================
+   SCROLL REVEAL
+======================================================= */
+
+const revealElements =
+  document.querySelectorAll(
+    ".category-card, .product-card, .brand-item, .about-card, .project-card"
+  );
+
+
+const revealObserver =
+  new IntersectionObserver(
+
+    entries => {
+
+      entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+          entry.target.classList.add("revealed");
+
+          revealObserver.unobserve(entry.target);
+
+        }
+
+      });
+
+    },
+
+    {
+      threshold:.12
+    }
+
+  );
+
+
+revealElements.forEach(element => {
+
+  element.classList.add("reveal-item");
+
+  revealObserver.observe(element);
+
+});
+
+
+/* =======================================================
+   CURRENT YEAR
+======================================================= */
+
+const yearElement =
+  document.querySelector(".footer-bottom p");
+
+
+if(yearElement){
+
+  yearElement.innerHTML =
+    yearElement.innerHTML.replace(
+      "2026",
+      new Date().getFullYear()
+    );
+
+}
+
 </script>
 
 
+<!-- =======================================================
+     FINAL ANIMATION CSS
+======================================================= -->
+
+<style>
+
+.reveal-item{
+
+  opacity:0;
+
+  transform:translateY(20px);
+
+  transition:
+    opacity .65s ease,
+    transform .65s ease;
+
+}
+
+
+.reveal-item.revealed{
+
+  opacity:1;
+
+  transform:translateY(0);
+
+}
+
+
+/* =======================================================
+   MOBILE NAV
+======================================================= */
+
+@media(max-width:850px){
+
+  .nav-links{
+
+    position:absolute;
+
+    top:calc(100% + 8px);
+
+    left:15px;
+
+    right:15px;
+
+    background:#fff;
+
+    border:1px solid #e8e3da;
+
+    border-radius:16px;
+
+    padding:12px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:3px;
+
+    box-shadow:
+      0 20px 50px rgba(0,0,0,.10);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(-8px);
+
+    transition:.25s ease;
+
+  }
+
+
+  .nav-links.mobile-open{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+  }
+
+
+  .nav-links a{
+
+    width:100%;
+
+    padding:12px 14px;
+
+    border-radius:9px;
+
+  }
+
+
+  .nav-links a:hover{
+
+    background:#f6f3ed;
+
+  }
+
+}
+
+
+/* =======================================================
+   FORM MOBILE FIX
+======================================================= */
+
+@media(max-width:600px){
+
+  .enquiry-card-top h3{
+
+    font-size:27px;
+
+  }
+
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea{
+
+    font-size:16px;
+
+  }
+
+}
+
+
+/* =======================================================
+   ACCESSIBILITY
+======================================================= */
+
+button,
+a,
+input,
+select,
+textarea{
+
+  -webkit-tap-highlight-color:transparent;
+
+}
+
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+
+    scroll-behavior:auto !important;
+
+    transition:none !important;
+
+    animation:none !important;
+
+  }
+
+}
+
+</style>
+
+
+<!-- =======================================================
+     END OF KARMAYOGI ELECTRICALS WEBSITE
+======================================================= -->
+
 </body>
-  </html>
+</html>
